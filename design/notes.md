@@ -65,6 +65,11 @@ En caso de ser una tablet o móvil, pasará a estar en la parte inferior de form
 ### Estructura
 
 Cada web será distinta, pero el header y footer serán comunes a todas las páginas.
+![Vista Desktop!](sidebar.png 'Vista Desktop' =480x270)
+
+![Vista Tablet!](./sidebar_tablet.png 'Vista Tablet' =270x480)
+
+La versión para movil será igual que la de tablet, pero el menú se incluirá en un botón burger para más comodidad, dejando el header en una linea.
 
 ## Enlaces tenidos en cuenta para el desarrollo del proyecto:
 

@@ -1,0 +1,12 @@
+links:
+
+http://www.antoinebret.com/
+https://getbootstrap.com/docs/3.4/components/
+https://css-tricks.com/creating-a-smart-navbar-with-vanilla-javascript/
+https://stackoverflow.com/questions/61831160/how-to-reuse-a-navigation-bar-across-different-html-pages-with-css-and-js
+https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
+https://developer.mozilla.org/es/docs/Web/Web_Components
+
+
+usar ejecute
+al clickar el ancla cambias el url para ir a otra.
