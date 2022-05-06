@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -349,10 +350,165 @@ picture {
   display: block;
 }
 
-img {
+html body img.image {
   display: block;
   height: auto;
   max-width: 100%;
 }
 
-/*# sourceMappingURL=main.css.map */
+/* $gSideBar: linear-gradient(
+  90deg,
+  $cOutsideBg 0%,
+  $cSidebarBg 15%,
+  $cSidebarBg 90%,
+  $cMainBg 99%
+); */
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow1 {
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+
+body .bodyContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+
+.bodyContainer > .sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20rem;
+  /* width: 10%; */
+  z-index: 2;
+}
+.bodyContainer > .sidebarContainer .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(283deg, 39%, 63%);
+  background-image: linear-gradient(90deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+  width: 20rem;
+  height: 100vh;
+  bottom: 0;
+  position: fixed;
+  padding: 1vw;
+}
+.bodyContainer > .sidebarContainer .sidebar header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  max-width: 100%;
+  height: 100px;
+  width: 160px;
+  padding: 0 4px;
+  background-color: hsl(283deg, 34%, 40%);
+  border-radius: 30px;
+  border: 2px solid hsl(284deg, 38%, 11%);
+  /* background-image: $gLogoText;
+  background-size: 100%; */
+}
+
+.logoLink {
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 1.8rem;
+  text-decoration: none;
+  background-image: linear-gradient(-225deg, #c47d0c 0%, #eef4a1 38%, #dfbb45 50%, #eef4a1 68%, #c47d0c 100%);
+  background-size: 95%;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 900;
+}
+
+nav {
+  /* max-width: 100%; */
+  padding: 1rem;
+}
+nav ul {
+  padding: 0;
+  list-style: none;
+}
+nav li button {
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 0.5rem 0rem;
+  width: 7rem;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
+  text-align: center;
+}
+nav li button:hover {
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  transition: bottom, right, 0.2s ease;
+}
+nav li button:active {
+  top: 0px;
+  left: 0px;
+  transition: bottom, right, 0.1s ease;
+  box-shadow: none;
+  box-shadow: inset 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid hsl(284deg, 38%, 11%);
+  height: 2rem;
+  width: 14em;
+  color: #eef4a1;
+  background-color: hsl(283deg, 34%, 40%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 88vw;
+  padding: 1vw;
+  min-height: 100vh;
+  background-color: hsl(184deg, 6%, 81%);
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin-bottom: 3rem;
+  background-color: hsl(55deg, 100%, 95%);
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 2%;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+
+/*# sourceMappingURL=common.css.map */
