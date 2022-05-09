@@ -1,3 +1,5 @@
+@use './tools' as tools;
+
 * {
   box-sizing: border-box;
 }
@@ -16,126 +18,51 @@ html body img.image {
   max-width: 100%;
 }
 
-//Declarations
-$cSidebarBg: hsl(283, 39%, 63%);
-$cSidebarBg2: hsl(283, 39%, 72%);
-$cLogo: hsl(283, 34%, 40%);
-$cBorderLogo: hsl(284, 38%, 11%);
-$cShadow: hsla(0, 0, 0, 50%);
-$cLogoText1: #c47d0c;
-$cLogoText2: #eef4a1;
-$cLogoText3: #dfbb45;
-$cOutsideBg: white;
-$cMainBg: hsl(184, 6%, 81%);
-$cMainBlockBg: hsl(55, 100%, 95%);
-$footerFont: $cLogoText2;
-
-$gLogoText: linear-gradient(
-  -225deg,
-  $cLogoText1 0%,
-  $cLogoText2 38%,
-  $cLogoText3 50%,
-  $cLogoText2 68%,
-  $cLogoText1 100%
-);
-/* $gSideBar: linear-gradient(
-  90deg,
-  $cOutsideBg 0%,
-  $cSidebarBg 15%,
-  $cSidebarBg 90%,
-  $cMainBg 99%
-); */
-$gSideBar: linear-gradient(
-  90deg,
-  $cSidebarBg 0%,
-  $cSidebarBg 20%,
-  $cSidebarBg2 50%,
-  $cSidebarBg 80%,
-  $cSidebarBg 100%,
-  $cMainBg 99%
-);
-
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
-
-@mixin flexing($flexflow: row, $wrap: wrap, $justify: center, $align: center) {
-  // Use "none" to unset
-  @if display != 'flex' {
-    display: flex;
-  }
-  @if $flexflow != 'none' and $wrap != 'none' {
-    flex-flow: $flexflow $wrap;
-  } @else {
-    @if $flexflow != 'none' {
-      flex-direction: $flexflow;
-    }
-    @if $wrap != 'none' {
-      flex-wrap: $wrap;
-    }
-  }
-  @if $justify != 'none' {
-    justify-content: $justify;
-  }
-  @if $align != 'none' {
-    align-items: $align;
-  }
-}
-
-@mixin giveShadow($state) {
-  @if $state == 0 {
-    box-shadow: none;
-  } @else if $state == 1 {
-    box-shadow: 10px 10px 10px $cShadow;
-  } @else if $state == 2 {
-    box-shadow: inset 10px 10px 10px $cShadow;
-  }
-}
-
 body {
-  @include flexing(row, none, center, center);
+  @include tools.flexing(row, none, center, center);
   //min-height: 100vh;
 }
 
 .shadow1 {
-  @include giveShadow(1);
+  @include tools.giveShadow(1);
 }
 
 body .bodyContainer {
-  @include flexing(row, none, center, none);
+  @include tools.flexing(row, none, center, none);
   width: 100vw;
 }
 
 .bodyContainer > .sidebarContainer {
-  @include flexing(column, none, flex-start, center);
+  @include tools.flexing(column, none, flex-start, center);
   width: 20rem;
   /* width: 10%; */
   z-index: 2;
 
   & .sidebar {
-    @include flexing(column, none, space-between, center);
-    background-color: $cSidebarBg;
-    background-image: $gSideBar;
-    @include giveShadow(1);
+    @include tools.flexing(column, none, space-between, center);
+    background-color: tools.$cSidebarBg;
+    background-image: tools.$gSideBar;
+    @include tools.giveShadow(1);
     width: 20rem;
     height: 100vh;
     bottom: 0;
     position: fixed;
-    padding: 1vw;
     & header {
-      @include flexing(column, nowrap, center, center);
+      @include tools.flexing(column, nowrap, space-between, center);
     }
   }
 }
 
 .logo {
-  @include flexing(column, nowrap, center, center);
-  margin-top: 15vh;
+  @include tools.flexing(column, nowrap, center, center);
+  margin-top: 4vh;
   max-width: 100%;
   height: 100px;
   width: 160px;
   padding: 0 4px;
-  background-color: $cLogo;
+  background-color: tools.$cLogo;
   border-radius: 30px;
-  border: 2px solid $cBorderLogo;
+  border: 2px solid tools.$cBorderLogo;
   /* background-image: $gLogoText;
   background-size: 100%; */
 }
@@ -143,7 +70,7 @@ body .bodyContainer {
   font-family: 'Oleo Script Swash Caps', cursive;
   font-size: 1.8rem;
   text-decoration: none;
-  background-image: $gLogoText;
+  background-image: tools.$gLogoText;
   background-size: 95%;
   background-clip: text;
   color: transparent;
@@ -152,21 +79,22 @@ body .bodyContainer {
 }
 nav {
   /* max-width: 100%; */
-  padding: 1rem;
+  padding: 1vh 1rem;
+  padding: 0 1rem;
   & ul {
     padding: 0;
     list-style: none;
   }
   & li button {
     border: 2px solid black;
-    margin: 1rem;
-    padding: 0.5rem 0rem;
+    margin: 2vh 1rem;
+    padding: 1vh 0rem;
     width: 7rem;
     border-radius: 10px;
-    background-image: $gSideBar;
+    background-image: tools.$gSideBar;
     text-align: center;
     &:hover {
-      @include giveShadow(1);
+      @include tools.giveShadow(1);
       position: relative;
       bottom: 5px;
       right: 5px;
@@ -176,37 +104,20 @@ nav {
       top: 0px;
       left: 0px;
       transition: bottom, right, 0.1s ease;
-      @include giveShadow(0);
-      @include giveShadow(2);
+      @include tools.giveShadow(0);
+      @include tools.giveShadow(2);
     }
   }
 }
 
 footer div {
-  @include flexing(column, none, center, center);
+  @include tools.flexing(column, none, center, center);
+  margin-bottom: 3vh;
   font-size: 0.8rem;
   border-radius: 8px;
-  border: 2px solid $cBorderLogo;
+  border: 2px solid tools.$cBorderLogo;
   height: 2rem;
   width: 14em;
-  color: $footerFont;
-  background-color: $cLogo;
-}
-main {
-  @include flexing(column, none, center, center);
-  max-width: 1200px;
-  width: 88vw;
-  padding: 1vw;
-  min-height: 100vh;
-  background-color: $cMainBg;
-  & div {
-    @include flexing(column, none, center, center);
-    width: 65%;
-    margin-bottom: 3rem;
-    background-color: $cMainBlockBg;
-    border-radius: 15px;
-    border: 2px solid black;
-    padding: 2%;
-    @include giveShadow(1);
-  }
+  color: tools.$footerFont;
+  background-color: tools.$cLogo;
 }

@@ -1,0 +1,34 @@
+/* $gSideBar: linear-gradient(
+  90deg,
+  $cOutsideBg 0%,
+  $cSidebarBg 15%,
+  $cSidebarBg 90%,
+  $cMainBg 99%
+); */
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 88vw;
+  padding: 1vw;
+  min-height: 100vh;
+  background-color: hsl(184deg, 6%, 81%);
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin-bottom: 3rem;
+  background-color: hsl(55deg, 100%, 95%);
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 2%;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+
+/*# sourceMappingURL=home.css.map */

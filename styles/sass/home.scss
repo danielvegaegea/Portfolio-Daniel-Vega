@@ -1,0 +1,20 @@
+@use './tools' as tools;
+
+main {
+  @include tools.flexing(column, none, center, center);
+  max-width: 1200px;
+  width: 88vw;
+  padding: 1vw;
+  min-height: 100vh;
+  background-color: tools.$cMainBg;
+  & div {
+    @include tools.flexing(column, none, center, center);
+    width: 65%;
+    margin-bottom: 3rem;
+    background-color: tools.$cMainBlockBg;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 2%;
+    @include tools.giveShadow(1);
+  }
+}

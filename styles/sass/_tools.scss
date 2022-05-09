@@ -1,0 +1,73 @@
+//Declarations
+$cSidebarBg: hsl(283, 39%, 63%);
+$cSidebarBg2: hsl(283, 39%, 72%);
+$cLogo: hsl(283, 34%, 40%);
+$cBorderLogo: hsl(284, 38%, 11%);
+$cShadow: hsla(0, 0, 0, 50%);
+$cLogoText1: #c47d0c;
+$cLogoText2: #eef4a1;
+$cLogoText3: #dfbb45;
+$cOutsideBg: white;
+$cMainBg: hsl(184, 6%, 81%);
+$cMainBlockBg: hsl(55, 100%, 95%);
+$footerFont: $cLogoText2;
+
+$gLogoText: linear-gradient(
+  -225deg,
+  $cLogoText1 0%,
+  $cLogoText2 38%,
+  $cLogoText3 50%,
+  $cLogoText2 68%,
+  $cLogoText1 100%
+);
+/* $gSideBar: linear-gradient(
+  90deg,
+  $cOutsideBg 0%,
+  $cSidebarBg 15%,
+  $cSidebarBg 90%,
+  $cMainBg 99%
+); */
+$gSideBar: linear-gradient(
+  90deg,
+  $cSidebarBg 0%,
+  $cSidebarBg 20%,
+  $cSidebarBg2 50%,
+  $cSidebarBg 80%,
+  $cSidebarBg 100%,
+  $cMainBg 99%
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
+
+@mixin flexing($flexflow: row, $wrap: wrap, $justify: center, $align: center) {
+  // Use "none" to unset
+  @if display != 'flex' {
+    display: flex;
+  }
+  @if $flexflow != 'none' and $wrap != 'none' {
+    flex-flow: $flexflow $wrap;
+  } @else {
+    @if $flexflow != 'none' {
+      flex-direction: $flexflow;
+    }
+    @if $wrap != 'none' {
+      flex-wrap: $wrap;
+    }
+  }
+  @if $justify != 'none' {
+    justify-content: $justify;
+  }
+  @if $align != 'none' {
+    align-items: $align;
+  }
+}
+
+@mixin giveShadow($state) {
+  @if $state == 0 {
+    box-shadow: none;
+  } @else if $state == 1 {
+    box-shadow: 10px 10px 10px $cShadow;
+  } @else if $state == 2 {
+    box-shadow: inset 10px 10px 10px $cShadow;
+  }
+}
