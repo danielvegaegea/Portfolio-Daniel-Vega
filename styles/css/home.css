@@ -6,6 +6,12 @@
   $cMainBg 99%
 ); */
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
+@media only screen and (max-width: 768px) {
+  html main {
+    width: 100vw;
+    padding-top: 8vh;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -22,7 +28,7 @@ main div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 35rem;
   margin-bottom: 3rem;
   background-color: hsl(55deg, 100%, 95%);
   border-radius: 15px;

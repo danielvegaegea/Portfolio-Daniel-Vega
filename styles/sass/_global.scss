@@ -34,7 +34,8 @@ body .bodyContainer {
 
 .bodyContainer > .sidebarContainer {
   @include tools.flexing(column, none, flex-start, center);
-  width: 20rem;
+  //width: 20rem;
+  width: 25vw;
   /* width: 10%; */
   z-index: 2;
 
@@ -43,10 +44,12 @@ body .bodyContainer {
     background-color: tools.$cSidebarBg;
     background-image: tools.$gSideBar;
     @include tools.giveShadow(1);
-    width: 20rem;
+    //width: 20rem;
+    position: fixed;
+    width: 25vw;
     height: 100vh;
     bottom: 0;
-    position: fixed;
+
     & header {
       @include tools.flexing(column, nowrap, space-between, center);
     }
@@ -82,6 +85,7 @@ nav {
   padding: 1vh 1rem;
   padding: 0 1rem;
   & ul {
+    @include tools.flexing(column, nowrap, center, center);
     padding: 0;
     list-style: none;
   }

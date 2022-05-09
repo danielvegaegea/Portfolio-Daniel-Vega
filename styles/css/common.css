@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -386,7 +387,7 @@ body .bodyContainer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 20rem;
+  width: 25vw;
   /* width: 10%; */
   z-index: 2;
 }
@@ -398,10 +399,10 @@ body .bodyContainer {
   background-color: hsl(283deg, 39%, 63%);
   background-image: linear-gradient(90deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
-  width: 20rem;
+  position: fixed;
+  width: 25vw;
   height: 100vh;
   bottom: 0;
-  position: fixed;
 }
 .bodyContainer > .sidebarContainer .sidebar header {
   display: flex;
@@ -445,6 +446,10 @@ nav {
   padding: 0 1rem;
 }
 nav ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   list-style: none;
 }
@@ -485,6 +490,71 @@ footer div {
   width: 14em;
   color: #eef4a1;
   background-color: hsl(283deg, 34%, 40%);
+}
+
+/* $gSideBar: linear-gradient(
+  90deg,
+  $cOutsideBg 0%,
+  $cSidebarBg 15%,
+  $cSidebarBg 90%,
+  $cMainBg 99%
+); */
+@media only screen and (max-width: 768px) {
+  html .bodyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  html .bodyContainer .sidebarContainer {
+    width: 100vw;
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  html .bodyContainer .sidebarContainer .sidebar {
+    background-image: linear-gradient(0deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
+    width: 100vw;
+    height: 18vh;
+    top: 0;
+    bottom: unset;
+    left: 0;
+  }
+  html .bodyContainer .sidebarContainer .sidebar header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  html .bodyContainer .sidebarContainer .sidebar header .logo {
+    margin: 0;
+    height: 70px;
+    width: 112px;
+    border-radius: 21px;
+  }
+  html .bodyContainer .sidebarContainer .sidebar header .logo .logoLink {
+    font-size: 1.26rem;
+  }
+  html .bodyContainer .sidebarContainer .sidebar header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  html .bodyContainer .sidebarContainer .sidebar header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+  }
+  html .bodyContainer .sidebarContainer .sidebar footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0.1vh;
+  }
 }
 
 /*# sourceMappingURL=common.css.map */

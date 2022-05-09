@@ -36,6 +36,15 @@ $gSideBar: linear-gradient(
   $cSidebarBg 100%,
   $cMainBg 99%
 );
+$gSideBarMq: linear-gradient(
+  0deg,
+  $cSidebarBg 0%,
+  $cSidebarBg 20%,
+  $cSidebarBg2 50%,
+  $cSidebarBg 80%,
+  $cSidebarBg 100%,
+  $cMainBg 99%
+);
 
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
 

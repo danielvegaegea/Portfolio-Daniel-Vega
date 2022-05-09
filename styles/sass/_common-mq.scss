@@ -1,0 +1,46 @@
+@use './tools' as tools;
+
+@media only screen and (max-width: 768px) {
+  html {
+    & .bodyContainer {
+      @include tools.flexing(column, none, flex-start, center);
+      & .sidebarContainer {
+        width: 100vw;
+        height: 18vh;
+        @include tools.flexing(row, none, flex-start, center);
+        & .sidebar {
+          background-image: tools.$gSideBarMq;
+          width: 100vw;
+          height: 18vh;
+          top: 0;
+          bottom: unset;
+          left: 0;
+          & header {
+            @include tools.flexing(row, none, flex-start, center);
+            & .logo {
+              margin: 0;
+              height: 70px;
+              width: 112px;
+              border-radius: 21px;
+              & .logoLink {
+                font-size: 1.26rem;
+              }
+            }
+            & nav {
+              @include tools.flexing(row, none, flex-start, center);
+              & ul {
+                @include tools.flexing(row, nowrap, center, center);
+                border: 2px solid red;
+              }
+            }
+          }
+          & footer {
+            position: fixed;
+            bottom: 0;
+            margin-bottom: 0.1vh;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use './tools' as tools;
+@import './_home-mq';
 
 main {
   @include tools.flexing(column, none, center, center);
@@ -9,7 +10,7 @@ main {
   background-color: tools.$cMainBg;
   & div {
     @include tools.flexing(column, none, center, center);
-    width: 65%;
+    width: 35rem;
     margin-bottom: 3rem;
     background-color: tools.$cMainBlockBg;
     border-radius: 15px;
