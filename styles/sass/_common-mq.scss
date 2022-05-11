@@ -3,41 +3,81 @@
 @media only screen and (max-width: 768px) {
   html {
     & .bodyContainer {
-      @include tools.flexing(column, none, flex-start, center);
+      //@include tools.flexing(row, none, flex-start, flex-start);
+      //max-width: inherit;
       & .sidebarContainer {
-        width: 100vw;
-        height: 18vh;
-        @include tools.flexing(row, none, flex-start, center);
+        //min-width: 0;
+        //width: 100vw;
+        min-width: 0;
+        width: 0;
+        height: 0;
+        //@include tools.flexing(column, none, flex-start, flex-start);
         & .sidebar {
           background-image: tools.$gSideBarMq;
           width: 100vw;
-          height: 18vh;
+          height: 10vh;
           top: 0;
           bottom: unset;
           left: 0;
-          & header {
+          & header.mediaQuery {
             @include tools.flexing(row, none, flex-start, center);
+            height: 10vh;
             & .logo {
               margin: 0;
-              height: 70px;
-              width: 112px;
-              border-radius: 21px;
+              //height: 70px;
+              //width: 112px;
+              height: 30px;
+              width: 48px;
+              border-radius: 10px;
               & .logoLink {
-                font-size: 1.26rem;
+                //font-size: 1.26rem;
+                font-size: 0.9rem;
               }
             }
             & nav {
               @include tools.flexing(row, none, flex-start, center);
+              //padding: 0 2.085vw;
+              padding: calc(0.1rem + 1.878vw);
               & ul {
                 @include tools.flexing(row, nowrap, center, center);
-                border: 2px solid red;
+                //border: 2px solid red;
+                & li button {
+                  width: 6rem;
+                  margin: 1vh calc(0.3rem + 0.001vw);
+                  font-size: calc(0.9rem + 0.21vw);
+                }
               }
             }
           }
-          & footer {
+          & footer.mediaQuery .shadow1 {
             position: fixed;
-            bottom: 0;
-            margin-bottom: 0.1vh;
+            left: -1vw;
+            bottom: -3.4vh;
+            border-radius: 0;
+            width: 110vw;
+            height: 3.8vh;
+            //margin-bottom: 0.1vh;
+            @include tools.giveShadow(3);
+            //@include tools.giveShadow(2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html body div.bodyContainer.mediaQueryMb {
+    & .sidebarContainer {
+      & .sidebar {
+        height: 2rem;
+        & header {
+          & .btn-menu {
+            display: flex;
+          }
+          & .logo,
+          nav {
+            display: none;
           }
         }
       }

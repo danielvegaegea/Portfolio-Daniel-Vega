@@ -2,7 +2,8 @@
 @import './_home-mq';
 
 main {
-  @include tools.flexing(column, none, center, center);
+  //border: 3px solid red;
+  @include tools.flexing(column, none, flex-start, center);
   max-width: 1200px;
   width: 88vw;
   padding: 1vw;
@@ -10,7 +11,9 @@ main {
   background-color: tools.$cMainBg;
   & div {
     @include tools.flexing(column, none, center, center);
-    width: 35rem;
+    //width: 70vw;
+    width: calc(20rem + 3 * 9vw);
+    min-width: 20rem;
     margin-bottom: 3rem;
     background-color: tools.$cMainBlockBg;
     border-radius: 15px;

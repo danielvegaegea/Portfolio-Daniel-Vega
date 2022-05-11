@@ -9,13 +9,17 @@
 @media only screen and (max-width: 768px) {
   html main {
     width: 100vw;
-    padding-top: 8vh;
+    padding-top: 5vh;
+  }
+  html main div {
+    width: 95vw;
+    margin-bottom: 2rem;
   }
 }
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1200px;
   width: 88vw;
@@ -28,7 +32,8 @@ main div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 35rem;
+  width: calc(20rem + 27vw);
+  min-width: 20rem;
   margin-bottom: 3rem;
   background-color: hsl(55deg, 100%, 95%);
   border-radius: 15px;

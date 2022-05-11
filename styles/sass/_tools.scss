@@ -3,7 +3,7 @@ $cSidebarBg: hsl(283, 39%, 63%);
 $cSidebarBg2: hsl(283, 39%, 72%);
 $cLogo: hsl(283, 34%, 40%);
 $cBorderLogo: hsl(284, 38%, 11%);
-$cShadow: hsla(0, 0, 0, 50%);
+$cShadow: hsla(0, 0%, 0%, 50%);
 $cLogoText1: #c47d0c;
 $cLogoText2: #eef4a1;
 $cLogoText3: #dfbb45;
@@ -71,6 +71,7 @@ $gSideBarMq: linear-gradient(
   }
 }
 
+// 0 None / 1 Normal / 2 Inset / 3 Inverted
 @mixin giveShadow($state) {
   @if $state == 0 {
     box-shadow: none;
@@ -78,5 +79,7 @@ $gSideBarMq: linear-gradient(
     box-shadow: 10px 10px 10px $cShadow;
   } @else if $state == 2 {
     box-shadow: inset 10px 10px 10px $cShadow;
+  } @else if $state == 3 {
+    box-shadow: 10px -10px 10px $cShadow;
   }
 }
