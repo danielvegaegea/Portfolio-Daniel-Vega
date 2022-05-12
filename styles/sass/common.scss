@@ -38,6 +38,7 @@ body .bodyContainer {
   @include tools.flexing(column, none, flex-start, center);
   min-width: 14rem;
   width: 18vw;
+  max-width: 12rem;
 
   & .sidebar {
     @include tools.flexing(column, none, space-between, center);
@@ -46,6 +47,7 @@ body .bodyContainer {
     @include tools.giveShadow(1);
     position: fixed;
     min-width: 14rem;
+    max-width: 12rem;
     width: 18vw;
     height: 100vh;
     bottom: 0;
@@ -56,7 +58,9 @@ body .bodyContainer {
   }
 }
 .btn-menu {
+  font-family: Arial, Helvetica, sans-serif;
   display: none;
+  font-weight: 600;
 }
 .logo {
   @include tools.flexing(column, nowrap, center, center);
@@ -86,7 +90,6 @@ body .bodyContainer {
   font-weight: 900;
 }
 nav {
-  /* max-width: 100%; */
   padding: 1vh 1rem;
   padding: 0 1rem;
   & ul {

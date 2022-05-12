@@ -1,5 +1,11 @@
 @use './tools' as tools;
 
+@media only screen and (max-width: 3840px) {
+  html body {
+    //font-size: 200%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   html {
     & .bodyContainer {
@@ -9,11 +15,13 @@
         //min-width: 0;
         //width: 100vw;
         min-width: 0;
+        max-width: unset;
         width: 0;
         height: 0;
         //@include tools.flexing(column, none, flex-start, flex-start);
         & .sidebar {
           background-image: tools.$gSideBarMq;
+          max-width: unset;
           width: 100vw;
           height: 10vh;
           top: 0;
@@ -70,10 +78,24 @@
   html body div.bodyContainer.mediaQueryMb {
     & .sidebarContainer {
       & .sidebar {
-        height: 2rem;
+        height: 3.5rem;
+        min-width: 0;
+        width: 3.3rem;
+        border: 2px solid black;
+        border-radius: 0 0 20px 0;
+        padding: 2vw;
+        @include tools.flexing(row, none, flex-start, center);
         & header {
           & .btn-menu {
-            display: flex;
+            @include tools.flexing(row, none, center, center);
+            color: tools.$cLogoText3;
+            background-color: tools.$cLogo;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            border: 1px solid tools.$cBorderLogo;
+            &:active {
+              color: tools.$cLogoText2;
+            }
           }
           & .logo,
           nav {
@@ -84,3 +106,42 @@
     }
   }
 }
+/* @media only screen and (max-width: 480px) {
+  html body div.bodyContainer.mediaQueryMb {
+    & .sidebarContainer {
+      & .sidebar {
+        //[]
+        height: 3.5rem;
+        min-width: 0;
+        //[]
+        width: 100vw;
+        border: 2px solid black;
+        border-radius: 0 0 20px 0;
+        padding: 2vw;
+        @include tools.flexing(row, none, flex-start, center);
+        & header {
+          & .btn-menu {
+            @include tools.flexing(row, none, center, center);
+            color: tools.$cLogoText3;
+            background-color: tools.$cLogo;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            border: 1px solid tools.$cBorderLogo;
+            &:active {
+              color: tools.$cLogoText2;
+            }
+          }
+          & .logo {
+            //[]
+            display: none;
+          }
+          & nav {
+            //[]
+            //@include tools.flexing(row, wrap, flex-start, center);
+          }
+        }
+      }
+    }
+  }
+}
+ */

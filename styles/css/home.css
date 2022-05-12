@@ -9,11 +9,13 @@
 @media only screen and (max-width: 768px) {
   html main {
     width: 100vw;
-    padding-top: 5vh;
+    padding-top: 8vh;
+    padding-bottom: 3vh;
   }
   html main div {
     width: 95vw;
     margin-bottom: 2rem;
+    font-size: calc(1rem + 0.82vw);
   }
 }
 main {
@@ -21,8 +23,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-width: 1200px;
-  width: 88vw;
+  width: 100vw;
   padding: 1vw;
   min-height: 100vh;
   background-color: hsl(184deg, 6%, 81%);
@@ -39,6 +40,7 @@ main div {
   border-radius: 15px;
   border: 2px solid black;
   padding: 2%;
+  font-size: calc(0.8rem + 0.32vw);
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
 }
 

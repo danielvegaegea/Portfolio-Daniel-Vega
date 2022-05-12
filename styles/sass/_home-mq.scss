@@ -1,14 +1,12 @@
 @media only screen and (max-width: 768px) {
   html main {
     width: 100vw;
-    padding-top: 5vh;
+    padding-top: 8vh;
+    padding-bottom: 3vh;
     & div {
       width: 95vw;
       margin-bottom: 2rem;
+      font-size: calc(1rem + 0.82vw);
     }
-  }
-}
-@media only screen and (max-width: 480px) {
-  html main {
   }
 }
