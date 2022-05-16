@@ -1,58 +1,47 @@
 @use './tools' as tools;
 
-@media only screen and (max-width: 3840px) {
-  html body {
-    //font-size: 200%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), (orientation: portrait) {
   html {
     & .bodyContainer {
-      //@include tools.flexing(row, none, flex-start, flex-start);
-      //max-width: inherit;
       & .sidebarContainer {
-        //min-width: 0;
-        //width: 100vw;
         min-width: 0;
         max-width: unset;
         width: 0;
         height: 0;
-        //@include tools.flexing(column, none, flex-start, flex-start);
         & .sidebar {
           background-image: tools.$gSideBarMq;
           max-width: unset;
           width: 100vw;
           height: 10vh;
+          max-height: 5rem;
           top: 0;
           bottom: unset;
           left: 0;
           & header.mediaQuery {
             @include tools.flexing(row, none, flex-start, center);
             height: 10vh;
+            max-height: 5rem;
             & .logo {
               margin: 0;
-              //height: 70px;
-              //width: 112px;
-              height: 30px;
-              width: 48px;
+              height: 40px;
+              width: 64px;
               border-radius: 10px;
               & .logoLink {
-                //font-size: 1.26rem;
-                font-size: 0.9rem;
+                font-size: 1.26rem;
               }
             }
             & nav {
               @include tools.flexing(row, none, flex-start, center);
-              //padding: 0 2.085vw;
-              padding: calc(0.1rem + 1.878vw);
+              padding: calc(0.4vw);
               & ul {
                 @include tools.flexing(row, nowrap, center, center);
-                //border: 2px solid red;
                 & li button {
-                  width: 6rem;
-                  margin: 1vh calc(0.3rem + 0.001vw);
-                  font-size: calc(0.9rem + 0.21vw);
+                  padding: 0;
+                  width: calc(3rem + 11.5vw);
+                  padding: 0.5vh 0;
+                  text-align: center;
+                  margin: 1vh calc(0.01rem + 0.5vw);
+                  font-size: calc(0.2rem + 2.2vw);
                 }
               }
             }
@@ -64,9 +53,9 @@
             border-radius: 0;
             width: 110vw;
             height: 3.8vh;
-            //margin-bottom: 0.1vh;
+            max-height: 3rem;
+            font-size: calc(0.9rem + 1vw);
             @include tools.giveShadow(3);
-            //@include tools.giveShadow(2);
           }
         }
       }
@@ -81,45 +70,16 @@
         height: 3.5rem;
         min-width: 0;
         width: 3.3rem;
-        border: 2px solid black;
+        border: 2px solid tools.$cDefaultBorder;
         border-radius: 0 0 20px 0;
         padding: 2vw;
         @include tools.flexing(row, none, flex-start, center);
         & header {
-          & .btn-menu {
-            @include tools.flexing(row, none, center, center);
-            color: tools.$cLogoText3;
-            background-color: tools.$cLogo;
-            font-size: 1.4rem;
-            border-radius: 5px;
-            border: 1px solid tools.$cBorderLogo;
-            &:active {
-              color: tools.$cLogoText2;
-            }
-          }
           & .logo,
-          nav {
+          & nav {
             display: none;
+            transition: 6s ease width;
           }
-        }
-      }
-    }
-  }
-}
-/* @media only screen and (max-width: 480px) {
-  html body div.bodyContainer.mediaQueryMb {
-    & .sidebarContainer {
-      & .sidebar {
-        //[]
-        height: 3.5rem;
-        min-width: 0;
-        //[]
-        width: 100vw;
-        border: 2px solid black;
-        border-radius: 0 0 20px 0;
-        padding: 2vw;
-        @include tools.flexing(row, none, flex-start, center);
-        & header {
           & .btn-menu {
             @include tools.flexing(row, none, center, center);
             color: tools.$cLogoText3;
@@ -127,21 +87,19 @@
             font-size: 1.4rem;
             border-radius: 5px;
             border: 1px solid tools.$cBorderLogo;
+            &:hover {
+              @include tools.giveShadow(1);
+              position: relative;
+              bottom: 5px;
+              right: 5px;
+            }
             &:active {
+              @include tools.giveShadow(2);
               color: tools.$cLogoText2;
             }
-          }
-          & .logo {
-            //[]
-            display: none;
-          }
-          & nav {
-            //[]
-            //@include tools.flexing(row, wrap, flex-start, center);
           }
         }
       }
     }
   }
 }
- */

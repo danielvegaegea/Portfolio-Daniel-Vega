@@ -1,12 +1,21 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), (orientation: portrait) {
   html main {
     width: 100vw;
     padding-top: 8vh;
     padding-bottom: 3vh;
     & div {
       width: 95vw;
+      padding: calc(1rem + 2.5vw);
       margin-bottom: 2rem;
-      font-size: calc(1rem + 0.82vw);
+      & h1 {
+        font-size: calc(1rem + 4vw);
+      }
+      & h2 {
+        font-size: calc(1rem + 3vw);
+      }
+      & p {
+        font-size: calc(1rem + 2vw);
+      }
     }
   }
 }

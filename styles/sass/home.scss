@@ -2,22 +2,19 @@
 @import './_home-mq';
 
 main {
-  //border: 3px solid red;
   @include tools.flexing(column, none, flex-start, center);
-  //max-width: 1200px;
   width: 100vw;
   padding: 1vw;
   min-height: 100vh;
   background-color: tools.$cMainBg;
   & div {
     @include tools.flexing(column, none, center, center);
-    //width: 70vw;
     width: calc(20rem + 3 * 9vw);
     min-width: 20rem;
     margin-bottom: 3rem;
     background-color: tools.$cMainBlockBg;
     border-radius: 15px;
-    border: 2px solid black;
+    border: 2px solid tools.$cDefaultBorder;
     padding: 2%;
     font-size: calc(0.8rem + 0.32vw);
     @include tools.giveShadow(1);

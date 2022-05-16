@@ -10,8 +10,10 @@ burgerBtn.addEventListener('click', showMenu);
 // Execution
 function showMenu(event) {
   if (!burgerMenu) {
-    sideBar.style.width = '100vw';
+    sideBar.style.width = '99vw';
     mainMenu.style.display = 'flex';
+    mainMenu.style.width = '99vw';
+    //mainMenu.style.transition = '6s ease width';
     burgerBtn.textContent = 'X';
     burgerMenu = true;
   } else {
