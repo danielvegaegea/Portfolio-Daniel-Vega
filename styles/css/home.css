@@ -1,10 +1,3 @@
-/* $gSideBar: linear-gradient(
-  90deg,
-  $cOutsideBg 0%,
-  $cSidebarBg 15%,
-  $cSidebarBg 90%,
-  $cMainBg 99%
-); */
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
 @media only screen and (max-width: 768px), (orientation: portrait) {
   html main {

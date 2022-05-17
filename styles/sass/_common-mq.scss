@@ -18,7 +18,7 @@
           bottom: unset;
           left: 0;
           & header.mediaQuery {
-            @include tools.flexing(row, none, flex-start, center);
+            @include tools.flexing(row, none, space-between, center);
             height: 10vh;
             max-height: 5rem;
             & .logo {
@@ -32,15 +32,15 @@
             }
             & nav {
               @include tools.flexing(row, none, flex-start, center);
-              padding: calc(0.4vw);
+              padding: calc(0.2rem + 3 * 0.2vw);
               & ul {
                 @include tools.flexing(row, nowrap, center, center);
                 & li button {
                   padding: 0;
-                  width: calc(3rem + 11.5vw);
+                  width: calc(2.4rem + 12vw);
                   padding: 0.5vh 0;
                   text-align: center;
-                  margin: 1vh calc(0.01rem + 0.5vw);
+                  margin: 1vh calc(0.01rem + 1.5 * 0.5vw);
                   font-size: calc(0.2rem + 2.2vw);
                 }
               }
@@ -61,6 +61,7 @@
       }
     }
   }
+  //animation here
 }
 
 @media only screen and (max-width: 480px) {
@@ -86,7 +87,7 @@
             background-color: tools.$cLogo;
             font-size: 1.4rem;
             border-radius: 5px;
-            border: 1px solid tools.$cBorderLogo;
+            border: 1px solid tools.$cLogoBorder;
             &:hover {
               @include tools.giveShadow(1);
               position: relative;

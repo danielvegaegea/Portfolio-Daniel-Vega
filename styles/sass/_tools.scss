@@ -1,33 +1,18 @@
-//Declarations
-$cSidebarBg: hsl(283, 39%, 63%);
-$cSidebarBg2: hsl(283, 39%, 72%);
-$cLogo: hsl(283, 34%, 40%);
-$cBorderLogo: hsl(284, 38%, 11%);
+//
+// Declarations
+//
+
 $cShadow: hsla(0, 0%, 0%, 50%);
 $cDefaultBorder: black;
-$cLogoText1: #c47d0c;
-$cLogoText2: #eef4a1;
-$cLogoText3: #dfbb45;
+
+// Main
 $cOutsideBg: white;
 $cMainBg: hsl(184, 6%, 81%);
 $cMainBlockBg: hsl(55, 100%, 95%);
-$footerFont: $cLogoText2;
 
-$gLogoText: linear-gradient(
-  -225deg,
-  $cLogoText1 0%,
-  $cLogoText2 38%,
-  $cLogoText3 50%,
-  $cLogoText2 68%,
-  $cLogoText1 100%
-);
-/* $gSideBar: linear-gradient(
-  90deg,
-  $cOutsideBg 0%,
-  $cSidebarBg 15%,
-  $cSidebarBg 90%,
-  $cMainBg 99%
-); */
+// Sidebar
+$cSidebarBg: hsl(283, 39%, 63%);
+$cSidebarBg2: hsl(283, 39%, 72%);
 $gSideBar: linear-gradient(
   90deg,
   $cSidebarBg 0%,
@@ -46,6 +31,33 @@ $gSideBarMq: linear-gradient(
   $cSidebarBg 100%,
   $cMainBg 99%
 );
+// Logo
+$cLogo: hsl(283, 34%, 40%);
+$cLogoBorder: hsl(284, 38%, 11%);
+$cLogoText1: #c47d0c;
+$cLogoText2: #eef4a1;
+$cLogoText3: #dfbb45;
+$gLogoText: linear-gradient(
+  -225deg,
+  $cLogoText1 0%,
+  $cLogoText2 38%,
+  $cLogoText3 50%,
+  $cLogoText2 68%,
+  $cLogoText1 100%
+);
+
+// Logo Hover Glow
+$cLogoBackGlow: hsl(283, 34%, 60%);
+$cLogoGlow: hsla(64, 79%, 79%, 70%);
+$cLogoBorderGlow: hsl(64, 79%, 79%);
+
+// Logo Active Glow
+$cLogoActiveGlow: hsla(45, 70%, 57%, 70%);
+$cLogoBorderActiveGlow: hsl(45, 70%, 57%);
+
+// Footer
+$cFooterBorder: hsl(284, 38%, 11%);
+$footerFont: $cLogoText2;
 
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
 
@@ -82,5 +94,16 @@ $gSideBarMq: linear-gradient(
     box-shadow: inset 10px 10px 10px $cShadow;
   } @else if $state == 3 {
     box-shadow: 10px -10px 10px $cShadow;
+  } @else if $state == 4 {
+    // Logo glows when hover in yellow.
+    border: 1px solid $cLogoBorderGlow;
+    background-color: $cLogoBackGlow;
+    box-shadow: 0px 0px 20px 10px $cLogoGlow, inset 0px 0px 20px 15px $cLogoGlow;
+  } @else if $state == 5 {
+    // Logo glows when active in orange.
+    border: 1px solid $cLogoBorderActiveGlow;
+    background-color: $cLogoBackGlow;
+    box-shadow: 0px 0px 20px 10px $cLogoActiveGlow,
+      inset 0px 0px 20px 15px $cLogoActiveGlow;
   }
 }

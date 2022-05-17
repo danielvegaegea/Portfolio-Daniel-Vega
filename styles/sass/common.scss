@@ -72,7 +72,16 @@ body .bodyContainer {
   padding: 0 4px;
   background-color: tools.$cLogo;
   border-radius: 21px;
-  border: 2px solid tools.$cBorderLogo;
+  border: 2px solid tools.$cLogoBorder;
+  &:hover {
+    transform: scale(1.4);
+    @include tools.giveShadow(0);
+    @include tools.giveShadow(4);
+  }
+  &:active {
+    @include tools.giveShadow(0);
+    @include tools.giveShadow(5);
+  }
 }
 .logoLink {
   font-family: 'Oleo Script Swash Caps', cursive;
@@ -123,7 +132,7 @@ footer div {
   margin-bottom: 3vh;
   font-size: 0.8rem;
   border-radius: 8px;
-  border: 2px solid tools.$cBorderLogo;
+  border: 2px solid tools.$cFooterBorder;
   height: 2rem;
   width: 14em;
   color: tools.$footerFont;
