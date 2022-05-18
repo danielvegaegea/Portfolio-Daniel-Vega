@@ -46,4 +46,8 @@ main div {
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
 }
 
+.bigFonts {
+  font-size: calc(3.6rem + 0.32vw);
+}
+
 /*# sourceMappingURL=home.css.map */

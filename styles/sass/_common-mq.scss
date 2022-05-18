@@ -1,73 +1,87 @@
 @use './tools' as tools;
 
-@media only screen and (max-width: 768px), (orientation: portrait) {
+// TABLET
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  //, (orientation: portrait)
   html {
-    & .bodyContainer {
-      & .sidebarContainer {
-        min-width: 0;
+    body .bodyContainer .sidebarContainer {
+      min-width: 0;
+      max-width: unset;
+      width: 0;
+      height: 0;
+      & .sidebar {
+        background-image: tools.$gSideBarMq;
         max-width: unset;
-        width: 0;
-        height: 0;
-        & .sidebar {
-          background-image: tools.$gSideBarMq;
-          max-width: unset;
-          width: 100vw;
+        width: 100vw;
+        height: 10vh;
+        max-height: 5rem;
+        top: 0;
+        bottom: unset;
+        left: 0;
+        & header.mediaQuery {
+          @include tools.flexing(row, none, space-between, center);
           height: 10vh;
           max-height: 5rem;
-          top: 0;
-          bottom: unset;
-          left: 0;
-          & header.mediaQuery {
-            @include tools.flexing(row, none, space-between, center);
-            height: 10vh;
-            max-height: 5rem;
-            & .logo {
-              margin: 0 1vw 0 0;
-              height: 35px;
-              width: 57px;
-              border-radius: 10px;
-              & .logoLink {
-                font-size: 1.26rem;
-              }
+          & .logo {
+            margin: 0 1vw 0 0;
+            height: 35px;
+            width: 57px;
+            border-radius: 10px;
+            & .logoLink {
+              font-size: 1.26rem;
             }
-            & nav {
-              @include tools.flexing(row, none, flex-start, center);
-              padding: calc(0.2rem + 3 * 0.2vw);
-              & ul {
-                @include tools.flexing(row, nowrap, center, center);
-                & li button {
-                  padding: 0;
-                  width: calc(2.4rem + 12vw);
-                  padding: 0.5vh 0;
-                  text-align: center;
-                  margin: 1vh calc(0.01rem + 1.5 * 0.5vw);
-                  font-size: calc(0.2rem + 2.2vw);
-                }
+          }
+          & nav {
+            @include tools.flexing(row, none, flex-start, center);
+            padding: calc(0.2rem + 3 * 0.2vw);
+            & ul {
+              @include tools.flexing(row, nowrap, center, center);
+              button {
+                padding: 0;
+                width: calc(2.4rem + 12vw);
+                padding: 0.5vh 0;
+                text-align: center;
+                margin: 1vh calc(0.01rem + 1.5 * 0.5vw);
+                font-size: calc(0.2rem + 2.2vw);
+                outline: 2px solid yellow;
               }
             }
           }
-          & footer.mediaQuery .shadow1 {
-            position: fixed;
-            left: -1vw;
-            bottom: -3.4vh;
-            border-radius: 0;
-            width: 110vw;
-            height: 3.8vh;
-            max-height: 3rem;
-            font-size: calc(0.9rem + 1vw);
-            @include tools.giveShadow(3);
-          }
+        }
+        & footer.mediaQuery .shadow1 {
+          position: fixed;
+          left: -1vw;
+          bottom: -3.4vh;
+          padding: 2vw;
+          border-radius: 0;
+          width: 102vw;
+          height: 2rem;
+          font-size: calc(0.9rem + 1vw);
+          @include tools.giveShadow(3);
         }
       }
     }
   }
 }
 
+// MOBILE
 @media only screen and (max-width: 480px) {
-  html body div.bodyContainer.mediaQueryMb {
-    & .sidebarContainer {
+  html {
+    body .bodyContainer .sidebarContainer {
       & .sidebar {
-        height: 6.5rem;
+      }
+    }
+  }
+
+  .mediaQueryMb {
+    & .sidebarContainer {
+      min-width: 0;
+      width: 0;
+      & .sidebar {
+        background-image: tools.$gSideBarMq;
+        max-width: unset;
+        left: 0;
+        height: 4.8rem;
         width: 98vw;
         //border: 2px solid tools.$cDefaultBorder;
         border-radius: 0 0 20px 0;
@@ -75,6 +89,7 @@
         @include tools.flexing(row, wrap, flex-start, flex-start);
         & header {
           @include tools.flexing(row, nowrap, space-between, center);
+          max-height: 5rem;
           width: 100%;
           padding: 0 0.4rem;
           height: 6.5rem;
@@ -83,6 +98,9 @@
             height: 35px;
             width: 56px;
             border-radius: 10px;
+            & .logoLink {
+              font-size: 1.26rem;
+            }
           }
           & ul {
             // All comments here trying to give two lines menu.
@@ -97,10 +115,13 @@
             width: 14rem;
             padding: 0;
             & li button {
+              width: calc(2.4rem + 12vw);
+              padding: 0.5vh 0;
+              font-size: calc(0.2rem + 2.2vw);
               margin: 0.2rem 0.4rem;
             }
           }
-          & .btn-menu {
+          .btn-menu {
             //@include tools.flexing(row, none, center, center);
             visibility: visible;
             color: tools.$cLogoText3;
@@ -119,6 +140,16 @@
               color: tools.$cLogoText2;
             }
           }
+        }
+        & footer.mediaQuery .shadow1 {
+          position: fixed;
+          left: -1vw;
+          bottom: -3.4vh;
+          border-radius: 0;
+          width: 102vw;
+          height: 2rem;
+          font-size: calc(0.9rem + 1vw);
+          @include tools.giveShadow(3);
         }
       }
     }

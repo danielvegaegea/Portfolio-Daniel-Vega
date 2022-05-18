@@ -13,9 +13,13 @@ https://htmlcolorcodes.com/es/tabla-de-colores/
 https://webgradients.com/
 https://bootcamp.uxdesign.cc/gradient-text-in-css-609068d3f953
 https://www.peko-step.com/es/tool/hslrgb.html
+https://unicode-table.com/es/1F5DA/
 Resources not used:
 Tip: Use execute. When clicking the anchor, you change url for another.
 
 sass:
 sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
+
+ToDo:
+Botones no cambian de tamaño con botón de fuente en tablet.

@@ -340,14 +340,14 @@ template {
   display: none;
 }
 
-@media only screen and (max-width: 768px), (orientation: portrait) {
-  html .bodyContainer .sidebarContainer {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  html body .bodyContainer .sidebarContainer {
     min-width: 0;
     max-width: unset;
     width: 0;
     height: 0;
   }
-  html .bodyContainer .sidebarContainer .sidebar {
+  html body .bodyContainer .sidebarContainer .sidebar {
     background-image: linear-gradient(0deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
     max-width: unset;
     width: 100vw;
@@ -357,7 +357,7 @@ template {
     bottom: unset;
     left: 0;
   }
-  html .bodyContainer .sidebarContainer .sidebar header.mediaQuery {
+  html body .bodyContainer .sidebarContainer .sidebar header.mediaQuery {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -365,51 +365,59 @@ template {
     height: 10vh;
     max-height: 5rem;
   }
-  html .bodyContainer .sidebarContainer .sidebar header.mediaQuery .logo {
+  html body .bodyContainer .sidebarContainer .sidebar header.mediaQuery .logo {
     margin: 0 1vw 0 0;
     height: 35px;
     width: 57px;
     border-radius: 10px;
   }
-  html .bodyContainer .sidebarContainer .sidebar header.mediaQuery .logo .logoLink {
+  html body .bodyContainer .sidebarContainer .sidebar header.mediaQuery .logo .logoLink {
     font-size: 1.26rem;
   }
-  html .bodyContainer .sidebarContainer .sidebar header.mediaQuery nav {
+  html body .bodyContainer .sidebarContainer .sidebar header.mediaQuery nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding: calc(0.2rem + 0.6vw);
   }
-  html .bodyContainer .sidebarContainer .sidebar header.mediaQuery nav ul {
+  html body .bodyContainer .sidebarContainer .sidebar header.mediaQuery nav ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
-  html .bodyContainer .sidebarContainer .sidebar header.mediaQuery nav ul li button {
+  html body .bodyContainer .sidebarContainer .sidebar header.mediaQuery nav ul button {
     padding: 0;
     width: calc(2.4rem + 12vw);
     padding: 0.5vh 0;
     text-align: center;
     margin: 1vh calc(0.01rem + 0.75vw);
     font-size: calc(0.2rem + 2.2vw);
+    outline: 2px solid yellow;
   }
-  html .bodyContainer .sidebarContainer .sidebar footer.mediaQuery .shadow1 {
+  html body .bodyContainer .sidebarContainer .sidebar footer.mediaQuery .shadow1 {
     position: fixed;
     left: -1vw;
     bottom: -3.4vh;
+    padding: 2vw;
     border-radius: 0;
-    width: 110vw;
-    height: 3.8vh;
-    max-height: 3rem;
+    width: 102vw;
+    height: 2rem;
     font-size: calc(0.9rem + 1vw);
     box-shadow: 10px -10px 10px hsla(0deg, 0%, 0%, 0.5);
   }
 }
 @media only screen and (max-width: 480px) {
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar {
-    height: 6.5rem;
+  .mediaQueryMb .sidebarContainer {
+    min-width: 0;
+    width: 0;
+  }
+  .mediaQueryMb .sidebarContainer .sidebar {
+    background-image: linear-gradient(0deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
+    max-width: unset;
+    left: 0;
+    height: 4.8rem;
     width: 98vw;
     border-radius: 0 0 20px 0;
     padding: 0;
@@ -418,22 +426,26 @@ template {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header {
+  .mediaQueryMb .sidebarContainer .sidebar header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    max-height: 5rem;
     width: 100%;
     padding: 0 0.4rem;
     height: 6.5rem;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header .logo {
+  .mediaQueryMb .sidebarContainer .sidebar header .logo {
     margin: 0;
     height: 35px;
     width: 56px;
     border-radius: 10px;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header ul {
+  .mediaQueryMb .sidebarContainer .sidebar header .logo .logoLink {
+    font-size: 1.26rem;
+  }
+  .mediaQueryMb .sidebarContainer .sidebar header ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -441,7 +453,7 @@ template {
     width: 14rem;
     margin: 0;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header nav {
+  .mediaQueryMb .sidebarContainer .sidebar header nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -449,10 +461,13 @@ template {
     width: 14rem;
     padding: 0;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header nav li button {
+  .mediaQueryMb .sidebarContainer .sidebar header nav li button {
+    width: calc(2.4rem + 12vw);
+    padding: 0.5vh 0;
+    font-size: calc(0.2rem + 2.2vw);
     margin: 0.2rem 0.4rem;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header .btn-menu {
+  .mediaQueryMb .sidebarContainer .sidebar header .btn-menu {
     visibility: visible;
     color: #dfbb45;
     background-color: hsl(283deg, 34%, 40%);
@@ -460,15 +475,25 @@ template {
     border-radius: 5px;
     border: 1px solid hsl(284deg, 38%, 11%);
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header .btn-menu:hover {
+  .mediaQueryMb .sidebarContainer .sidebar header .btn-menu:hover {
     box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
     position: relative;
     bottom: 5px;
     right: 5px;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header .btn-menu:active {
+  .mediaQueryMb .sidebarContainer .sidebar header .btn-menu:active {
     box-shadow: inset 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
     color: #eef4a1;
+  }
+  .mediaQueryMb .sidebarContainer .sidebar footer.mediaQuery .shadow1 {
+    position: fixed;
+    left: -1vw;
+    bottom: -3.4vh;
+    border-radius: 0;
+    width: 102vw;
+    height: 2rem;
+    font-size: calc(0.9rem + 1vw);
+    box-shadow: 10px -10px 10px hsla(0deg, 0%, 0%, 0.5);
   }
 }
 /* Copia de respaldo del mq de móvil antes de trastear con el menú de dos lineas.
@@ -645,6 +670,7 @@ nav ul {
   list-style: none;
 }
 nav li button {
+  font-size: 1rem;
   border: 2px solid black;
   margin: 2vh 1rem;
   padding: 1vh 0;
@@ -670,17 +696,34 @@ nav li button:active {
 
 footer div {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 3vh;
+  padding: 0 0.5rem;
   font-size: 0.8rem;
   border-radius: 8px;
   border: 2px solid hsl(284deg, 38%, 11%);
   height: 2rem;
-  width: 14em;
+  width: 16em;
   color: #eef4a1;
   background-color: hsl(283deg, 34%, 40%);
+}
+footer div .btn-font {
+  border: 2px solid black;
+  background-color: hsl(283deg, 34%, 60%);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  font-weight: 600;
+  line-height: 1rem;
+}
+footer div .btn-font:hover {
+  border: 2px solid #eef4a1;
+  color: #eef4a1;
+}
+footer div .btn-font:active {
+  border: 2px solid hsl(45deg, 70%, 57%);
+  color: hsl(45deg, 70%, 57%);
 }
 
 html body .bodyContainer .sidebarContainer div.sidebar.hidden {
@@ -693,6 +736,17 @@ html body .bodyContainer .sidebarContainer div.sidebar.hidden .logo {
 }
 html body .bodyContainer .sidebarContainer div.sidebar.hidden nav {
   visibility: hidden;
+}
+
+html body button.btn-menu.bigFontsBtn {
+  outline: 3px solid red;
+  font-size: 1.8rem;
+  width: 12rem;
+}
+
+html body button.fontButtonActive {
+  border: 2px solid hsl(45deg, 70%, 57%);
+  color: hsl(45deg, 70%, 57%);
 }
 
 /*# sourceMappingURL=common.css.map */

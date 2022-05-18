@@ -106,6 +106,7 @@ nav {
     list-style: none;
   }
   & li button {
+    font-size: 1rem;
     border: 2px solid tools.$cDefaultBorder;
     margin: 2vh 1rem;
     padding: 1vh 0;
@@ -131,15 +132,34 @@ nav {
 }
 
 footer div {
-  @include tools.flexing(column, none, center, center);
+  @include tools.flexing(row, none, space-between, center);
   margin-bottom: 3vh;
+  padding: 0 0.5rem;
   font-size: 0.8rem;
   border-radius: 8px;
   border: 2px solid tools.$cFooterBorder;
   height: 2rem;
-  width: 14em;
+  width: 16em;
   color: tools.$footerFont;
   background-color: tools.$cLogo;
+  & .btn-font {
+    //border: 1px solid red;
+    border: 2px solid tools.$cDefaultBorder;
+    //background-image: tools.$gSideButton;
+    background-color: tools.$cFontBottonBg;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    font-weight: 600;
+    line-height: 1rem;
+    &:hover {
+      border: 2px solid tools.$cFontButton;
+      color: tools.$cFontButton;
+    }
+    &:active {
+      border: 2px solid tools.$cFontButtonActive;
+      color: tools.$cFontButtonActive;
+    }
+  }
 }
 
 html body .bodyContainer .sidebarContainer div.sidebar.hidden {
@@ -153,4 +173,15 @@ html body .bodyContainer .sidebarContainer div.sidebar.hidden {
   & nav {
     visibility: hidden;
   }
+}
+
+html body button.btn-menu.bigFontsBtn {
+  outline: 3px solid red;
+  font-size: 1.8rem;
+  width: 12rem;
+}
+
+html body button.fontButtonActive {
+  border: 2px solid tools.$cFontButtonActive;
+  color: tools.$cFontButtonActive;
 }
