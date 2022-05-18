@@ -40,16 +40,18 @@ body .bodyContainer {
   max-width: 12rem;
 
   & .sidebar {
+    outline: 1px solid black;
     @include tools.flexing(column, none, space-between, center);
     background-color: tools.$cSidebarBg;
     background-image: tools.$gSideBar;
     @include tools.giveShadow(1);
     position: fixed;
+    top: 0;
+    bottom: 0;
     min-width: 14rem;
     max-width: 12rem;
     width: 18vw;
-    height: 100vh;
-    bottom: 0;
+    //height: 100vh;
 
     & header {
       @include tools.flexing(column, nowrap, space-between, center);
@@ -58,8 +60,9 @@ body .bodyContainer {
 }
 .btn-menu {
   font-family: Arial, Helvetica, sans-serif;
-  display: none;
+  display: flex;
   font-weight: 600;
+  visibility: hidden;
 }
 .logo {
   @include tools.flexing(column, nowrap, center, center);
@@ -108,7 +111,7 @@ nav {
     padding: 1vh 0;
     width: 7rem;
     border-radius: 10px;
-    background-image: tools.$gSideBar;
+    background-image: tools.$gSideButton;
     text-align: center;
     &:hover {
       @include tools.giveShadow(1);
@@ -137,4 +140,17 @@ footer div {
   width: 14em;
   color: tools.$footerFont;
   background-color: tools.$cLogo;
+}
+
+html body .bodyContainer .sidebarContainer div.sidebar.hidden {
+  //border: 2px solid red;
+  min-width: unset;
+  width: 2.6rem;
+  border-radius: 0 0 60px 0;
+  & .logo {
+    visibility: hidden;
+  }
+  & nav {
+    visibility: hidden;
+  }
 }

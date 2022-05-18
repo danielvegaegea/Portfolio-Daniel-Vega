@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -365,9 +366,9 @@ template {
     max-height: 5rem;
   }
   html .bodyContainer .sidebarContainer .sidebar header.mediaQuery .logo {
-    margin: 0;
-    height: 40px;
-    width: 64px;
+    margin: 0 1vw 0 0;
+    height: 35px;
+    width: 57px;
     border-radius: 10px;
   }
   html .bodyContainer .sidebarContainer .sidebar header.mediaQuery .logo .logoLink {
@@ -408,26 +409,51 @@ template {
 }
 @media only screen and (max-width: 480px) {
   html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar {
-    height: 3.5rem;
-    min-width: 0;
-    width: 3.3rem;
-    border: 2px solid black;
+    height: 6.5rem;
+    width: 98vw;
     border-radius: 0 0 20px 0;
-    padding: 2vw;
+    padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
   }
-  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header .logo, html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header nav {
-    display: none;
-    transition: 6s ease width;
+  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 0.4rem;
+    height: 6.5rem;
+  }
+  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header .logo {
+    margin: 0;
+    height: 35px;
+    width: 56px;
+    border-radius: 10px;
+  }
+  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 14rem;
+    margin: 0;
+  }
+  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 14rem;
+    padding: 0;
+  }
+  html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header nav li button {
+    margin: 0.2rem 0.4rem;
   }
   html body div.bodyContainer.mediaQueryMb .sidebarContainer .sidebar header .btn-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    visibility: visible;
     color: #dfbb45;
     background-color: hsl(283deg, 34%, 40%);
     font-size: 1.4rem;
@@ -445,6 +471,51 @@ template {
     color: #eef4a1;
   }
 }
+/* Copia de respaldo del mq de móvil antes de trastear con el menú de dos lineas.
+@media only screen and (max-width: 480px) {
+  html body div.bodyContainer.mediaQueryMb {
+    & .sidebarContainer {
+      & .sidebar {
+        height: 3.5rem;
+        min-width: 0;
+        width: 3.3rem;
+        border: 2px solid tools.$cDefaultBorder;
+        border-radius: 0 0 20px 0;
+        padding: 2vw;
+        @include tools.flexing(row, none, flex-start, center);
+        & header {
+          & .logo,
+          & nav {
+            // All comments here trying to give two lines menu.
+            //display: none;
+            display: none;
+            transition: 6s ease width;
+          }
+          & .btn-menu {
+            @include tools.flexing(row, none, center, center);
+            color: tools.$cLogoText3;
+            background-color: tools.$cLogo;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            border: 1px solid tools.$cLogoBorder;
+            &:hover {
+              @include tools.giveShadow(1);
+              position: relative;
+              bottom: 5px;
+              right: 5px;
+            }
+            &:active {
+              @include tools.giveShadow(2);
+              color: tools.$cLogoText2;
+            }
+          }
+        }
+      }
+    }
+    //animation here
+  }
+}
+ */
 * {
   box-sizing: border-box;
 }
@@ -492,6 +563,7 @@ body .bodyContainer {
   max-width: 12rem;
 }
 .bodyContainer > .sidebarContainer .sidebar {
+  outline: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -500,11 +572,11 @@ body .bodyContainer {
   background-image: linear-gradient(90deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
   position: fixed;
+  top: 0;
+  bottom: 0;
   min-width: 14rem;
   max-width: 12rem;
   width: 18vw;
-  height: 100vh;
-  bottom: 0;
 }
 .bodyContainer > .sidebarContainer .sidebar header {
   display: flex;
@@ -515,8 +587,9 @@ body .bodyContainer {
 
 .btn-menu {
   font-family: Arial, Helvetica, sans-serif;
-  display: none;
+  display: flex;
   font-weight: 600;
+  visibility: hidden;
 }
 
 .logo {
@@ -538,13 +611,13 @@ body .bodyContainer {
   box-shadow: none;
   border: 1px solid hsl(64deg, 79%, 79%);
   background-color: hsl(283deg, 34%, 60%);
-  box-shadow: 0px 0px 20px 10px hsla(64deg, 79%, 79%, 0.7), inset 0px 0px 20px 15px hsla(64deg, 79%, 79%, 0.7);
+  box-shadow: 0px 0px 20px 5px hsla(64deg, 79%, 79%, 0.7), inset 0px 0px 20px 15px hsla(64deg, 79%, 79%, 0.7);
 }
 .logo:active {
   box-shadow: none;
   border: 1px solid hsl(45deg, 70%, 57%);
   background-color: hsl(283deg, 34%, 60%);
-  box-shadow: 0px 0px 20px 10px hsla(45deg, 70%, 57%, 0.7), inset 0px 0px 20px 15px hsla(45deg, 70%, 57%, 0.7);
+  box-shadow: 0px 0px 20px 5px hsla(45deg, 70%, 57%, 0.7), inset 0px 0px 20px 15px hsla(45deg, 70%, 57%, 0.7);
 }
 
 .logoLink {
@@ -577,7 +650,7 @@ nav li button {
   padding: 1vh 0;
   width: 7rem;
   border-radius: 10px;
-  background-image: linear-gradient(90deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
+  background-image: linear-gradient(-25deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 30%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 70%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
   text-align: center;
 }
 nav li button:hover {
@@ -608,6 +681,18 @@ footer div {
   width: 14em;
   color: #eef4a1;
   background-color: hsl(283deg, 34%, 40%);
+}
+
+html body .bodyContainer .sidebarContainer div.sidebar.hidden {
+  min-width: unset;
+  width: 2.6rem;
+  border-radius: 0 0 60px 0;
+}
+html body .bodyContainer .sidebarContainer div.sidebar.hidden .logo {
+  visibility: hidden;
+}
+html body .bodyContainer .sidebarContainer div.sidebar.hidden nav {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=common.css.map */

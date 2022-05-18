@@ -22,9 +22,9 @@
             height: 10vh;
             max-height: 5rem;
             & .logo {
-              margin: 0;
-              height: 40px;
-              width: 64px;
+              margin: 0 1vw 0 0;
+              height: 35px;
+              width: 57px;
               border-radius: 10px;
               & .logoLink {
                 font-size: 1.26rem;
@@ -61,9 +61,72 @@
       }
     }
   }
-  //animation here
 }
 
+@media only screen and (max-width: 480px) {
+  html body div.bodyContainer.mediaQueryMb {
+    & .sidebarContainer {
+      & .sidebar {
+        height: 6.5rem;
+        width: 98vw;
+        //border: 2px solid tools.$cDefaultBorder;
+        border-radius: 0 0 20px 0;
+        padding: 0;
+        @include tools.flexing(row, wrap, flex-start, flex-start);
+        & header {
+          @include tools.flexing(row, nowrap, space-between, center);
+          width: 100%;
+          padding: 0 0.4rem;
+          height: 6.5rem;
+          & .logo {
+            margin: 0;
+            height: 35px;
+            width: 56px;
+            border-radius: 10px;
+          }
+          & ul {
+            // All comments here trying to give two lines menu.
+            @include tools.flexing(row, wrap, flex-start, flex-start);
+            //border: 3px solid red;
+            //width: 60vw;
+            width: 14rem;
+            margin: 0;
+          }
+          & nav {
+            @include tools.flexing(row, wrap, flex-start, flex-start);
+            width: 14rem;
+            padding: 0;
+            & li button {
+              margin: 0.2rem 0.4rem;
+            }
+          }
+          & .btn-menu {
+            //@include tools.flexing(row, none, center, center);
+            visibility: visible;
+            color: tools.$cLogoText3;
+            background-color: tools.$cLogo;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            border: 1px solid tools.$cLogoBorder;
+            &:hover {
+              @include tools.giveShadow(1);
+              position: relative;
+              bottom: 5px;
+              right: 5px;
+            }
+            &:active {
+              @include tools.giveShadow(2);
+              color: tools.$cLogoText2;
+            }
+          }
+        }
+      }
+    }
+    //animation here
+  }
+}
+
+/* Copia de respaldo del mq de móvil antes de trastear con el menú de dos lineas.
 @media only screen and (max-width: 480px) {
   html body div.bodyContainer.mediaQueryMb {
     & .sidebarContainer {
@@ -78,6 +141,8 @@
         & header {
           & .logo,
           & nav {
+            // All comments here trying to give two lines menu.
+            //display: none;
             display: none;
             transition: 6s ease width;
           }
@@ -102,5 +167,7 @@
         }
       }
     }
+    //animation here
   }
 }
+ */

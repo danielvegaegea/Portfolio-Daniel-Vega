@@ -31,6 +31,15 @@ $gSideBarMq: linear-gradient(
   $cSidebarBg 100%,
   $cMainBg 99%
 );
+$gSideButton: linear-gradient(
+  -25deg,
+  $cSidebarBg 0%,
+  $cSidebarBg 30%,
+  $cSidebarBg2 50%,
+  $cSidebarBg 70%,
+  $cSidebarBg 100%,
+  $cMainBg 99%
+);
 // Logo
 $cLogo: hsl(283, 34%, 40%);
 $cLogoBorder: hsl(284, 38%, 11%);
@@ -98,12 +107,12 @@ $footerFont: $cLogoText2;
     // Logo glows when hover in yellow.
     border: 1px solid $cLogoBorderGlow;
     background-color: $cLogoBackGlow;
-    box-shadow: 0px 0px 20px 10px $cLogoGlow, inset 0px 0px 20px 15px $cLogoGlow;
+    box-shadow: 0px 0px 20px 5px $cLogoGlow, inset 0px 0px 20px 15px $cLogoGlow;
   } @else if $state == 5 {
     // Logo glows when active in orange.
     border: 1px solid $cLogoBorderActiveGlow;
     background-color: $cLogoBackGlow;
-    box-shadow: 0px 0px 20px 10px $cLogoActiveGlow,
+    box-shadow: 0px 0px 20px 5px $cLogoActiveGlow,
       inset 0px 0px 20px 15px $cLogoActiveGlow;
   }
 }
