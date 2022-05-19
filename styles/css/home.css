@@ -1,23 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap");
+@media only screen and (min-width: 2440px) {
+  main.bigFontsMain {
+    font-size: calc(2.6rem + 0.32vw);
+  }
+}
 @media only screen and (max-width: 768px), (orientation: portrait) {
-  html main {
+  body main {
     width: 100vw;
     padding-top: 12vh;
     padding-bottom: 3vh;
   }
-  html main div {
+  body main div {
     width: 95vw;
     padding: calc(1rem + 2.5vw);
     margin-bottom: 2rem;
-  }
-  html main div h1 {
-    font-size: calc(1rem + 4vw);
-  }
-  html main div h2 {
-    font-size: calc(1rem + 3vw);
-  }
-  html main div p {
-    font-size: calc(1rem + 2vw);
   }
 }
 main {
@@ -29,6 +25,7 @@ main {
   padding: 1vw;
   min-height: 100vh;
   background-color: hsl(184deg, 6%, 81%);
+  font-size: calc(0.8rem + 0.32vw);
 }
 main div {
   display: flex;
@@ -42,12 +39,10 @@ main div {
   border-radius: 15px;
   border: 2px solid black;
   padding: 2%;
-  font-size: calc(0.8rem + 0.32vw);
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
 }
-
-.bigFonts {
-  font-size: calc(3.6rem + 0.32vw);
+main.bigFontsMain {
+  font-size: calc(1.6rem + 0.32vw);
 }
 
 /*# sourceMappingURL=home.css.map */

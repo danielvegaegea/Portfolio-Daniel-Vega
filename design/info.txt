@@ -22,4 +22,5 @@ sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
 
 ToDo:
-Botones no cambian de tamaño con botón de fuente en tablet.
+Search common and main fonts.
+Enable button links.

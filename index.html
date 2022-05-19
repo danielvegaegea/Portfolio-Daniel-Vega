@@ -9,10 +9,10 @@
     <title>Daniel Vega Egea - Página Personal | Home</title>
   </head>
   <body>
-    <div class="bodyContainer mediaQueryMb">
+    <div class="bodyContainer">
       <div class="sidebarContainer">
         <div class="sidebar">
-          <header class="mediaQuery">
+          <header>
             <button class="btn-menu">☰</button>
             <div class="logo shadow1">
               <!-- <a class="logoLink" href="./index.html">Daniel Vega Egea</a> -->
@@ -21,25 +21,43 @@
             <nav>
               <ul>
                 <li>
-                  <button class="navButton homeBTN">Home</button>
+                  <button
+                    class="navButton homeBTN"
+                    onclick="window.location='index.html'"
+                  >
+                    Home
+                  </button>
                 </li>
                 <li>
-                  <button class="navButton blogBTN">Blog</button>
+                  <button
+                    class="navButton blogBTN"
+                    onclick="window.location='blog.html'"
+                  >
+                    Blog
+                  </button>
                 </li>
                 <li>
-                  <button class="navButton aboutMeBTN">About Me</button>
+                  <button
+                    class="navButton aboutMeBTN"
+                    onclick="window.location='aboutme.html'"
+                  >
+                    About Me
+                  </button>
                 </li>
                 <li>
-                  <button class="navButton aboutWebBTN">About Web</button>
+                  <button
+                    class="navButton aboutWebBTN"
+                    onclick="window.location='aboutweb.html'"
+                  >
+                    About Web
+                  </button>
                 </li>
               </ul>
             </nav>
           </header>
-          <footer class="mediaQuery">
-            <div class="shadow1">
-              <button class="btn-font">🗚</button>
-              <p>2022 Daniel Vega Egea</p>
-            </div>
+          <footer class="shadow1">
+            <button class="btn-font">🗚</button>
+            <p>2022 Daniel Vega Egea</p>
           </footer>
         </div>
       </div>

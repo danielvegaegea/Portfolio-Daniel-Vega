@@ -7,6 +7,7 @@ main {
   padding: 1vw;
   min-height: 100vh;
   background-color: tools.$cMainBg;
+  font-size: calc(0.8rem + 0.32vw);
   & div {
     @include tools.flexing(column, none, center, center);
     width: calc(20rem + 3 * 9vw);
@@ -16,11 +17,9 @@ main {
     border-radius: 15px;
     border: 2px solid tools.$cDefaultBorder;
     padding: 2%;
-    font-size: calc(0.8rem + 0.32vw);
     @include tools.giveShadow(1);
   }
-}
-
-.bigFonts {
-  font-size: calc(3.6rem + 0.32vw);
+  &.bigFontsMain {
+    font-size: calc(1.6rem + 0.32vw);
+  }
 }

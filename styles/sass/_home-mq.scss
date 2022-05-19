@@ -1,5 +1,12 @@
+// BIG SCREEN
+@media only screen and (min-width: 2440px) {
+  main.bigFontsMain {
+    font-size: calc(2.6rem + 0.32vw);
+  }
+}
+// TABLET
 @media only screen and (max-width: 768px), (orientation: portrait) {
-  html main {
+  body main {
     width: 100vw;
     padding-top: 12vh;
     padding-bottom: 3vh;
@@ -7,15 +14,6 @@
       width: 95vw;
       padding: calc(1rem + 2.5vw);
       margin-bottom: 2rem;
-      & h1 {
-        font-size: calc(1rem + 4vw);
-      }
-      & h2 {
-        font-size: calc(1rem + 3vw);
-      }
-      & p {
-        font-size: calc(1rem + 2vw);
-      }
     }
   }
 }
