@@ -70,7 +70,6 @@ $footerFont: $cLogoText2;
 $cFontButton: #eef4a1;
 $cFontButtonActive: hsl(45, 70%, 57%);
 $cFontBottonBg: hsl(283, 34%, 60%);
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
 
 @mixin flexing($flexflow: row, $wrap: wrap, $justify: center, $align: center) {
   // Use "none" to unset

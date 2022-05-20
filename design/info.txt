@@ -17,6 +17,14 @@ https://unicode-table.com/es/1F5DA/
 Resources not used:
 Tip: Use execute. When clicking the anchor, you change url for another.
 
+font list:
+source: https://fonts.google.com/
+https://fonts.google.com/specimen/Oswald
+https://fonts.google.com/specimen/Roboto
+https://fonts.google.com/specimen/Josefin+Sans
+https://fonts.google.com/specimen/Varela+Round
+https://fonts.google.com/specimen/Play
+
 sass:
 sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
