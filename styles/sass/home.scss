@@ -14,36 +14,18 @@ h6 {
 }
 
 main {
-  & %headings {
-    font-family: 'Josefin Sans', sans-serif;
-  }
-  & h1 {
-    font-family: 'Oleo Script Swash Caps', cursive;
-    color: red;
-    font-size: 300%;
-  }
-  & h2 {
-    color: green;
-  }
-  & p {
-    font-family: 'Play', sans-serif;
-    &:first-of-type::first-letter {
-      color: red;
-      float: left;
-      padding-top: 0.1em;
-      //top: 4em;
-      font-size: 3em;
-      line-height: 3em;
-      margin-right: 0.5rem;
-    }
-  }
   @include tools.flexing(column, none, flex-start, center);
   width: 100vw;
   padding: 1vw;
   min-height: 100vh;
   background-color: tools.$cMainBg;
   font-size: calc(0.8rem + 0.32vw);
-  & div {
+
+  & %headings {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  & div.card {
     @include tools.flexing(column, none, center, center);
     width: calc(20rem + 3 * 9vw);
     min-width: 20rem;
@@ -53,7 +35,96 @@ main {
     border: 2px solid tools.$cDefaultBorder;
     padding: 2%;
     @include tools.giveShadow(1);
+    &.image-container {
+      padding: 0;
+      background-color: transparent;
+      border: 1px solid black;
+      max-width: 50%;
+      @include tools.giveShadow(1);
+      & img {
+        border-radius: inherit;
+      }
+    }
+    & h2 {
+      color: tools.$cTitle;
+      font-size: 170%;
+      text-align: center;
+    }
+
+    & p {
+      font-family: 'Play', sans-serif;
+      text-align: justify;
+      margin: 0 0 1em 0;
+      &.dropCaps::first-letter {
+        color: tools.$cFirstLetter;
+        float: left;
+        padding-top: 0.15em;
+        //top: 4em;
+        font-size: 2.5em;
+        line-height: 3em;
+        margin-right: 0.5rem;
+        font-weight: 800;
+      }
+    }
   }
+
+  .card.presentation {
+    & div {
+      @include tools.flexing(row, none, center, flex-start);
+      & div {
+        @include tools.flexing(column, none, center, center);
+        p {
+          margin: 0 0 0.8 em 0;
+        }
+      }
+    }
+
+    & .image-container {
+      margin: 0 1em 1em 0;
+      background-color: transparent;
+      border: 1px solid black;
+      max-width: 7rem;
+      @include tools.giveShadow(1);
+    }
+  }
+
+  & .title {
+    @include tools.giveShadow(1);
+    margin-bottom: 3rem;
+    padding: 1%;
+    background-color: tools.$cMainTitleBg;
+    border: 2px solid tools.$cDefaultBorder;
+    border-radius: 21px;
+    @include tools.flexing(row-reverse, none, space-between, center);
+    & .mainTitle {
+      width: 15.5em;
+
+      & h1 {
+        margin: 0.1rem 0;
+        background-image: tools.$gLogoText;
+        background-size: 95%;
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+        font-weight: 900;
+        font-family: 'Oleo Script Swash Caps', cursive;
+        font-size: 200%;
+      }
+    }
+
+    & .image {
+      background-color: transparent;
+      border: 1px solid black;
+      max-width: 10rem;
+      @include tools.giveShadow(1);
+      & img {
+        border: 2px solid black;
+        @include tools.giveShadow(1);
+        //max-width: 10%;
+      }
+    }
+  }
+
   &.bigFontsMain {
     font-size: calc(1.6rem + 0.32vw);
   }

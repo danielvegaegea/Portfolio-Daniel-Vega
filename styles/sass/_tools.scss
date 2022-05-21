@@ -71,6 +71,12 @@ $cFontButton: #eef4a1;
 $cFontButtonActive: hsl(45, 70%, 57%);
 $cFontBottonBg: hsl(283, 34%, 60%);
 
+// Main
+$cMainTitleBg: hsl(283, 34%, 40%);
+//$cTitle: hsl(283, 65%, 28%);
+$cTitle: hsl(86, 65%, 28%);
+$cFirstLetter: hsl(283, 34%, 40%);
+
 @mixin flexing($flexflow: row, $wrap: wrap, $justify: center, $align: center) {
   // Use "none" to unset
   @if display != 'flex' {

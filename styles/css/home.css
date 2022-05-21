@@ -8,10 +8,10 @@
 @media only screen and (max-width: 768px), (orientation: portrait) {
   body main {
     width: 100vw;
-    padding-top: 12vh;
+    padding-top: 18vh;
     padding-bottom: 3vh;
   }
-  body main div {
+  body main div.card {
     width: 95vw;
     padding: calc(1rem + 2.5vw);
     margin-bottom: 2rem;
@@ -35,26 +35,7 @@ main h5,
 main h6 {
   font-family: "Josefin Sans", sans-serif;
 }
-main h1 {
-  font-family: "Oleo Script Swash Caps", cursive;
-  color: red;
-  font-size: 300%;
-}
-main h2 {
-  color: green;
-}
-main p {
-  font-family: "Play", sans-serif;
-}
-main p:first-of-type::first-letter {
-  color: red;
-  float: left;
-  padding-top: 0.1em;
-  font-size: 3em;
-  line-height: 3em;
-  margin-right: 0.5rem;
-}
-main div {
+main div.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,6 +47,93 @@ main div {
   border-radius: 15px;
   border: 2px solid black;
   padding: 2%;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+main div.card.image-container {
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid black;
+  max-width: 50%;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+main div.card.image-container img {
+  border-radius: inherit;
+}
+main div.card h2 {
+  color: hsl(86deg, 65%, 28%);
+  font-size: 170%;
+  text-align: center;
+}
+main div.card p {
+  font-family: "Play", sans-serif;
+  text-align: justify;
+  margin: 0 0 1em 0;
+}
+main div.card p.dropCaps::first-letter {
+  color: hsl(283deg, 34%, 40%);
+  float: left;
+  padding-top: 0.15em;
+  font-size: 2.5em;
+  line-height: 3em;
+  margin-right: 0.5rem;
+  font-weight: 800;
+}
+main .card.presentation div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .card.presentation div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .card.presentation div div p {
+  margin: 0 0 0.8 em 0;
+}
+main .card.presentation .image-container {
+  margin: 0 1em 1em 0;
+  background-color: transparent;
+  border: 1px solid black;
+  max-width: 7rem;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+main .title {
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+  margin-bottom: 3rem;
+  padding: 1%;
+  background-color: hsl(283deg, 34%, 40%);
+  border: 2px solid black;
+  border-radius: 21px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+main .title .mainTitle {
+  width: 15.5em;
+}
+main .title .mainTitle h1 {
+  margin: 0.1rem 0;
+  background-image: linear-gradient(-225deg, #c47d0c 0%, #eef4a1 38%, #dfbb45 50%, #eef4a1 68%, #c47d0c 100%);
+  background-size: 95%;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 900;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 200%;
+}
+main .title .image {
+  background-color: transparent;
+  border: 1px solid black;
+  max-width: 10rem;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+}
+main .title .image img {
+  border: 2px solid black;
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
 }
 main.bigFontsMain {

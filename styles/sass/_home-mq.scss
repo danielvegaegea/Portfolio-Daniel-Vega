@@ -8,9 +8,9 @@
 @media only screen and (max-width: 768px), (orientation: portrait) {
   body main {
     width: 100vw;
-    padding-top: 12vh;
+    padding-top: 18vh;
     padding-bottom: 3vh;
-    & div {
+    & div.card {
       width: 95vw;
       padding: calc(1rem + 2.5vw);
       margin-bottom: 2rem;
