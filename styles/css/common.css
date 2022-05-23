@@ -575,6 +575,7 @@ body {
   max-width: 12rem;
 }
 .sidebarContainer .sidebar {
+  transition: all 0.2s ease;
   outline: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -605,7 +606,7 @@ body {
   visibility: hidden;
 }
 .sidebarContainer .sidebar.hidden nav {
-  visibility: hidden;
+  transform: translateX(-500px);
 }
 
 .btn-menu {
@@ -650,12 +651,14 @@ body {
   background-image: linear-gradient(-225deg, #c47d0c 0%, #eef4a1 38%, #dfbb45 50%, #eef4a1 68%, #c47d0c 100%);
   background-size: 95%;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   text-align: center;
   font-weight: 900;
 }
 
 nav {
+  transition: all 0.1s ease;
   padding: 1vh 1rem;
   padding: 0 1rem;
 }

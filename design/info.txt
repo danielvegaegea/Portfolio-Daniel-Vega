@@ -15,6 +15,8 @@ https://bootcamp.uxdesign.cc/gradient-text-in-css-609068d3f953
 https://www.peko-step.com/es/tool/hslrgb.html
 https://unicode-table.com/es/1F5DA/
 https://www.flaticon.com
+https://codeguide.co/#css-syntax
+
 Resources not used:
 Tip: Use execute. When clicking the anchor, you change url for another.
 
@@ -31,5 +33,6 @@ sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
 
 ToDo:
-Search common and main fonts.
-Enable button links.
+Transiciones para modal y btn-menu
+Intentar congelar fondo en modal.
+Revisar codigo para buenas costumbres.

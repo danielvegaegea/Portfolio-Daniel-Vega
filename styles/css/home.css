@@ -108,10 +108,6 @@ main .title {
   background-color: hsl(283deg, 34%, 40%);
   border: 2px solid black;
   border-radius: 21px;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
 }
 main .title .mainTitle {
   width: 15.5em;
@@ -121,6 +117,7 @@ main .title .mainTitle h1 {
   background-image: linear-gradient(-225deg, #c47d0c 0%, #eef4a1 38%, #dfbb45 50%, #eef4a1 68%, #c47d0c 100%);
   background-size: 95%;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   text-align: center;
   font-weight: 900;
@@ -163,6 +160,7 @@ main .modal {
   border-radius: 15px;
   border: 2px solid black;
   padding: 0.5rem;
+  transform: scale(0.1);
   transform: scale(1%);
   transition: transform 5.3s;
   transform: scale(100%);
@@ -209,6 +207,10 @@ main .modal-open {
   opacity: 1;
   visibility: visible;
 }
+main .modal-open .modal {
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
 main .modal-open .image-container {
   width: 150%;
   max-width: 93vw;
@@ -218,8 +220,11 @@ main .modal-open .image-container img {
   max-height: 91vh;
 }
 main .modal-close {
-  opacity: 0;
-  visibility: hidden;
+  border: 3px solid red;
+}
+main .modal-close .modal {
+  transition: transform 0.5s ease;
+  transform: scale(0.1);
 }
 
 /*# sourceMappingURL=home.css.map */

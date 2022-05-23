@@ -95,7 +95,7 @@ main {
     background-color: tools.$cMainTitleBg;
     border: 2px solid tools.$cDefaultBorder;
     border-radius: 21px;
-    @include tools.flexing(row-reverse, none, space-between, center);
+    //@include tools.flexing(reverse, none, space-between, center);
     & .mainTitle {
       width: 15.5em;
 
@@ -104,6 +104,7 @@ main {
         background-image: tools.$gLogoText;
         background-size: 95%;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         text-align: center;
         font-weight: 900;
@@ -149,6 +150,7 @@ main {
     border-radius: 15px;
     border: 2px solid tools.$cDefaultBorder;
     padding: 0.5rem;
+    transform: scale(0.1);
     //width: 25em;
     //height: 8em;
     //background: var(--relaxr-white);
@@ -200,6 +202,10 @@ main {
   .modal-open {
     opacity: 1;
     visibility: visible;
+    & .modal {
+      transition: transform 0.2s ease;
+      transform: scale(1);
+    }
     & .image-container {
       width: 150%;
       max-width: 93vw;
@@ -210,8 +216,13 @@ main {
     }
   }
   .modal-close {
-    opacity: 0;
-    visibility: hidden;
+    border: 3px solid red;
+    & .modal {
+      transition: transform 0.5s ease;
+      transform: scale(0.1);
+    }
+    //opacity: 0;
+    //visibility: hidden;
     //transform: translateY(-1000%);
   }
 }

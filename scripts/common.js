@@ -20,7 +20,6 @@ const imageModalContainer = document.getElementsByClassName(
   'modal-image-container',
 )[0];
 const modalClose = document.getElementsByClassName('close-btn')[0];
-let modal = document.querySelectorAll('.modal')[0];
 
 //    Disabled but maintained as alternative.
 //const burgerBtnStyle = getComputedStyle(burgerBtn);
@@ -46,7 +45,6 @@ const bigFonts = function (event) {
   // If button push, sets classes to increase font-size in several tags
   // and sets the button as active.
   if (!bigFontsSt) {
-    console.log(`A`);
     fontBtn.classList.add('fontButtonActive');
     footer.classList.add('bigFontsFooter');
     main.classList.add('bigFontsMain');
@@ -55,7 +53,6 @@ const bigFonts = function (event) {
     });
     bigFontsSt = true;
   } else {
-    console.log(`B`);
     fontBtn.classList.remove('fontButtonActive');
     footer.classList.remove('bigFontsFooter');
     main.classList.remove('bigFontsMain');
@@ -77,27 +74,25 @@ const noMobile = function () {
 };
 
 const openModal = function (path) {
-  console.log(`a`);
-  console.log(path);
+  // Gets image from `path`and inserts it as img tag in
+  // `image-container`.
   const imageZoomed = document.createElement('img');
   imageZoomed.classList.add('image');
   imageZoomed.src = path;
   imageModalContainer.appendChild(imageZoomed);
-  console.log('c');
+  // Change classes. See CSS for more details.
   modalContainer.classList.remove('modal-close');
   modalContainer.classList.add('modal-open');
-  //wrong
-  //modalContainer.classList.toggle('modal-close');
 };
 
 const closeModal = function () {
-  console.log(`b`);
   const deleteImage = imageModalContainer.firstChild;
-  imageModalContainer.removeChild(deleteImage);
-  modalContainer.classList.remove('modal-open');
+
+  setTimeout(function () {
+    imageModalContainer.removeChild(deleteImage);
+    modalContainer.classList.remove('modal-open');
+  }, 200);
   modalContainer.classList.add('modal-close');
-  //wrong
-  //modalContainer.classList.toggle('modal-close');
 };
 
 // Execution
@@ -108,19 +103,18 @@ if (window.innerWidth <= 480) {
 }
 
 // Event
+//    Responsivity
 burgerBtn.addEventListener('click', showMenu);
-fontBtn.addEventListener('click', bigFonts);
 window.addEventListener('resize', noMobile);
+//    Big Fonts
+fontBtn.addEventListener('click', bigFonts);
+
+//    Modal Images
+modalClose.addEventListener('click', closeModal);
+modalContainer.addEventListener('click', closeModal);
 Array.from(modalTrigger).forEach((index) => {
-  //console.log(index);
   index.addEventListener('click', function (e) {
     let zoomingImage = index.firstElementChild.src;
     openModal(zoomingImage);
   });
-  //modalTrigger[index.addEventListener('click', openModal);
 });
-modalClose.addEventListener('click', closeModal);
-modalContainer.addEventListener('click', closeModal);
-
-//bigFontsBtn
-//bigFonts
