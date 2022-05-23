@@ -128,4 +128,90 @@ main {
   &.bigFontsMain {
     font-size: calc(1.6rem + 0.32vw);
   }
+
+  /*   [ MODAL ] */
+  .modal-container {
+    position: fixed;
+    @include tools.flexing(row, none, center, center);
+    opacity: 0;
+    visibility: hidden;
+    //z-index: 1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .modal {
+    @include tools.flexing(row, none, center, flex-start);
+    //z-index: 2;
+    background-color: tools.$cMainBlockBg;
+    border-radius: 15px;
+    border: 2px solid tools.$cDefaultBorder;
+    padding: 0.5rem;
+    //width: 25em;
+    //height: 8em;
+    //background: var(--relaxr-white);
+    //overflow: hidden;
+    //border-radius: 5px;
+    transform: scale(1%);
+    transition: transform 5.3s;
+    transform: scale(100%);
+    /* & p {
+      color: var(--relaxr-almost-black);
+      font-size: 16px;
+      font-weight: var(--light);
+    } */
+    & button {
+      font-family: 'Oswald', sans-serif;
+      margin-left: 0.2rem;
+      height: 1.5em;
+      width: 1.5em;
+      color: tools.$cLogoText3;
+      background-color: tools.$cLogo;
+      font-size: 1.6rem;
+      border-radius: 5px;
+      border: 1px solid tools.$cLogoBorder;
+      &:hover {
+        @include tools.giveShadow(1);
+        position: relative;
+        bottom: 5px;
+        right: 5px;
+      }
+      &:active {
+        @include tools.giveShadow(2);
+        color: tools.$cLogoText2;
+      }
+      /* margin-top: 0.5%;
+      height: 2.5em;
+      width: 5em;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: var(--extra-bold);
+      color: var(--relaxr-white);
+      background-color: var(--relaxr-dark-blue);
+      &:hover {
+        background-color: var(--relaxr-yellow);
+        color: var(--relaxr-dark-blue);
+      } */
+    }
+  }
+
+  .modal-open {
+    opacity: 1;
+    visibility: visible;
+    & .image-container {
+      width: 150%;
+      max-width: 93vw;
+      max-height: 93vh;
+      & img {
+        max-height: 91vh;
+      }
+    }
+  }
+  .modal-close {
+    opacity: 0;
+    visibility: hidden;
+    //transform: translateY(-1000%);
+  }
 }
