@@ -72,13 +72,17 @@ const noMobile = function () {
   }
 };
 
-const openModal = function (path) {
+const openModal = function (path, caption) {
   // Gets image from `path`and inserts it as img tag in
   // `image-container`.
   const imageZoomed = document.createElement('img');
+  const imageCaption = document.createElement('span');
   imageZoomed.classList.add('image');
+  imageCaption.classList.add('image-caption');
   imageZoomed.src = path;
+  imageCaption.innerHTML = caption;
   imageModalContainer.appendChild(imageZoomed);
+  imageModalContainer.appendChild(imageCaption);
   // Change classes. See CSS for more details.
   modalContainer.classList.remove('modal-close');
   modalContainer.classList.add('modal-open');
@@ -86,9 +90,10 @@ const openModal = function (path) {
 
 const closeModal = function () {
   const deleteImage = imageModalContainer.firstChild;
-
+  const deleteText = imageModalContainer.lastChild;
   setTimeout(function () {
     imageModalContainer.removeChild(deleteImage);
+    imageModalContainer.removeChild(deleteText);
     modalContainer.classList.remove('modal-open');
   }, 200);
   modalContainer.classList.add('modal-close');
@@ -114,6 +119,7 @@ modalContainer.addEventListener('click', closeModal);
 Array.from(modalTrigger).forEach((index) => {
   index.addEventListener('click', function (e) {
     let zoomingImage = index.firstElementChild.src;
-    openModal(zoomingImage);
+    let caption = index.lastElementChild.innerHTML;
+    openModal(zoomingImage, caption);
   });
 });

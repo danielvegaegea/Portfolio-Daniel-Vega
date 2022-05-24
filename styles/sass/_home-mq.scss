@@ -8,12 +8,15 @@
 @media only screen and (max-width: 768px), (orientation: portrait) {
   body main {
     width: 100vw;
-    padding-top: 18vh;
-    padding-bottom: 3vh;
-    & div.card {
+    padding-top: 5.5rem;
+    padding-bottom: 1.5rem;
+    & .card {
       width: 95vw;
       padding: calc(1rem + 2.5vw);
       margin-bottom: 2rem;
+    }
+    & .image-card {
+      max-width: 95vw;
     }
   }
 }

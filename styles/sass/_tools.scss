@@ -76,9 +76,12 @@ $cFontBottonBg: hsl(283, 34%, 60%);
 $cModalBackground: rgba(0, 0, 0, 0.5);
 // Main
 $cMainTitleBg: hsl(283, 34%, 40%);
+$cMainBorder: black;
 //$cTitle: hsl(283, 65%, 28%);
 $cTitle: hsl(86, 65%, 28%);
+$cPostDate: hsl(283, 34%, 40%);
 $cFirstLetter: hsl(283, 34%, 40%);
+$cBullet: hsl(283, 34%, 40%);
 
 @mixin flexing($flexflow: row, $wrap: wrap, $justify: center, $align: center) {
   // Use "none" to unset

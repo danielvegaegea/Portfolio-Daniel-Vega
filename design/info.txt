@@ -33,5 +33,6 @@ sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
 
 ToDo:
+Mejorar fuentes para negrita e itálica.
 Revisar codigo para buenas costumbres.
 Crear las otras tres webs.
