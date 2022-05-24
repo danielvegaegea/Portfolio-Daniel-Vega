@@ -340,43 +340,43 @@ template {
 }
 
 @media only screen and (min-width: 2440px) {
-  body .sidebarContainer {
+  body .sidebar-container {
     width: 13vw;
     max-width: unset;
   }
-  body .sidebarContainer .sidebar {
+  body .sidebar-container .sidebar {
     width: 13vw;
     max-width: unset;
   }
   body footer {
     font-size: 1rem;
   }
-  body button.navButton.bigFontsBtns {
+  body button.nav-btn.big-fonts-btn {
     font-size: 1.8rem;
     width: 12rem;
   }
-  body footer.bigFontsFooter {
+  body footer.big-fonts-footer {
     font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  body .sidebarContainer {
-    min-width: 0;
-    max-width: unset;
+  body .sidebar-container {
     width: 0;
     height: 0;
-  }
-  body .sidebarContainer .sidebar {
-    background-image: linear-gradient(0deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
+    min-width: 0;
     max-width: unset;
-    width: 100vw;
-    height: 10vh;
-    max-height: 5rem;
+  }
+  body .sidebar-container .sidebar {
     top: 0;
     bottom: unset;
     left: 0;
+    width: 100vw;
+    height: 10vh;
+    max-height: 5rem;
+    background-image: linear-gradient(0deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
+    max-width: unset;
   }
-  body .sidebarContainer .sidebar header {
+  body .sidebar-container .sidebar header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -384,37 +384,37 @@ template {
     height: 10vh;
     max-height: 5rem;
   }
-  body .sidebarContainer .sidebar header .logo {
+  body .sidebar-container .sidebar header .logo {
     margin: 0;
     height: 35px;
     width: 57px;
     border-radius: 10px;
   }
-  body .sidebarContainer .sidebar header .logo .logoLink {
+  body .sidebar-container .sidebar header .logo .logo-link {
     font-size: 1.26rem;
   }
-  body .sidebarContainer .sidebar header nav {
+  body .sidebar-container .sidebar header nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding: 0 1vw 0 3vw;
   }
-  body .sidebarContainer .sidebar header nav ul {
+  body .sidebar-container .sidebar header nav ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     width: 80vw;
   }
-  body .sidebarContainer .sidebar header nav ul button {
+  body .sidebar-container .sidebar header nav ul button {
     padding: 0;
     width: calc(2.4rem + 12vw);
     padding: 0.5vh 0;
     text-align: center;
     margin: 1vh 0;
   }
-  body .sidebarContainer .sidebar footer {
+  body .sidebar-container .sidebar footer {
     position: fixed;
     left: -1vw;
     bottom: -3.4vh;
@@ -425,51 +425,51 @@ template {
     font-size: calc(0.9rem + 1vw);
     box-shadow: 10px -10px 10px hsla(0deg, 0%, 0%, 0.5);
   }
-  body .sidebarContainer button.navButton.bigFontsBtns {
+  body .sidebar-container button.nav-btn.big-fonts-btn {
     font-size: 1.2rem;
   }
-  body .sidebarContainer footer.bigFontsFooter {
+  body .sidebar-container footer.big-fonts-footer {
     font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: 480px) {
-  body .sidebarContainer {
-    min-width: 0;
+  body .sidebar-container {
     width: 0;
+    min-width: 0;
   }
-  body .sidebarContainer .sidebar {
-    background-image: linear-gradient(0deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
-    max-width: unset;
+  body .sidebar-container .sidebar {
     left: 0;
-    height: 4.8rem;
-    width: 98vw;
-    border-radius: 0 0 20px 0;
-    padding: 0;
+    background-image: linear-gradient(0deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    height: 4.8rem;
+    width: 98vw;
+    max-width: unset;
+    padding: 0;
+    border-radius: 0 0 20px 0;
   }
-  body .sidebarContainer .sidebar header {
+  body .sidebar-container .sidebar header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    height: 6.5rem;
     max-height: 5rem;
     width: 100%;
     padding: 0 0.4rem;
-    height: 6.5rem;
   }
-  body .sidebarContainer .sidebar header .logo {
+  body .sidebar-container .sidebar header .logo {
     margin: 0;
     height: 35px;
     width: 56px;
     border-radius: 10px;
   }
-  body .sidebarContainer .sidebar header .logo .logoLink {
+  body .sidebar-container .sidebar header .logo .logo-link {
     font-size: 1.26rem;
   }
-  body .sidebarContainer .sidebar header ul {
+  body .sidebar-container .sidebar header ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -477,7 +477,7 @@ template {
     width: 14rem;
     margin: 0;
   }
-  body .sidebarContainer .sidebar header nav {
+  body .sidebar-container .sidebar header nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -485,46 +485,46 @@ template {
     width: 14rem;
     padding: 0;
   }
-  body .sidebarContainer .sidebar header nav li button {
+  body .sidebar-container .sidebar header nav li button {
     width: calc(2.4rem + 12vw);
     padding: 0.5vh 0;
     font-size: calc(0.2rem + 2.2vw);
     margin: 0.2rem 0.4rem;
   }
-  body .sidebarContainer .sidebar header .btn-menu {
+  body .sidebar-container .sidebar header .btn-menu {
     visibility: visible;
+    font-size: 1.4rem;
     color: #dfbb45;
     background-color: hsl(283deg, 34%, 40%);
-    font-size: 1.4rem;
     border-radius: 5px;
     border: 1px solid hsl(284deg, 38%, 11%);
   }
-  body .sidebarContainer .sidebar header .btn-menu:hover {
+  body .sidebar-container .sidebar header .btn-menu:hover {
     box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
     position: relative;
     bottom: 5px;
     right: 5px;
   }
-  body .sidebarContainer .sidebar header .btn-menu:active {
+  body .sidebar-container .sidebar header .btn-menu:active {
     box-shadow: inset 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
     color: #eef4a1;
   }
-  body .sidebarContainer .sidebar footer {
+  body .sidebar-container .sidebar footer {
     position: fixed;
     left: -1vw;
     bottom: -3.4vh;
-    padding: 2vw;
-    border-radius: 0;
     width: 102vw;
     height: 2rem;
+    padding: 2vw;
     font-size: calc(0.9rem + 1vw);
+    border-radius: 0;
     box-shadow: 10px -10px 10px hsla(0deg, 0%, 0%, 0.5);
   }
-  body .sidebarContainer button.navButton.bigFontsBtns {
+  body .sidebar-container button.nav-btn.big-fonts-btn {
     font-size: 1rem;
     width: 6.2rem;
   }
-  body .sidebarContainer footer.bigFontsFooter {
+  body .sidebar-container footer.big-fonts-footer {
     font-size: 1.4rem;
   }
 }
@@ -557,7 +557,7 @@ body {
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
 }
 
-.bodyContainer {
+.body-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -565,7 +565,7 @@ body {
   width: 100vw;
 }
 
-.sidebarContainer {
+.sidebar-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -574,44 +574,44 @@ body {
   width: 18vw;
   max-width: 12rem;
 }
-.sidebarContainer .sidebar {
-  transition: all 0.2s ease;
-  outline: 1px solid black;
+.sidebar-container .sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 18vw;
+  min-width: 14rem;
+  max-width: 12rem;
+  outline: 1px solid black;
   background-color: hsl(283deg, 39%, 63%);
   background-image: linear-gradient(90deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 20%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 80%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  min-width: 14rem;
-  max-width: 12rem;
-  width: 18vw;
+  transition: all 0.2s ease;
 }
-.sidebarContainer .sidebar header {
+.sidebar-container .sidebar header {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
 }
-.sidebarContainer .sidebar.hidden {
-  min-width: unset;
+.sidebar-container .sidebar.hidden {
   width: 2.6rem;
+  min-width: unset;
   border-radius: 0 0 60px 0;
 }
-.sidebarContainer .sidebar.hidden .logo {
+.sidebar-container .sidebar.hidden .logo {
   visibility: hidden;
 }
-.sidebarContainer .sidebar.hidden nav {
+.sidebar-container .sidebar.hidden nav {
   transform: translateX(-500px);
 }
 
 .btn-menu {
-  font-family: Arial, Helvetica, sans-serif;
   display: flex;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   visibility: hidden;
 }
@@ -621,21 +621,21 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-top: 4vh;
-  max-width: 100%;
   height: 70px;
   width: 112px;
+  max-width: 100%;
+  margin-top: 4vh;
   padding: 0 4px;
   background-color: hsl(283deg, 34%, 40%);
   border-radius: 21px;
   border: 2px solid hsl(284deg, 38%, 11%);
 }
 .logo:hover {
-  transform: scale(1.4);
   box-shadow: none;
   border: 1px solid hsl(64deg, 79%, 79%);
   background-color: hsl(283deg, 34%, 60%);
   box-shadow: 0px 0px 20px 5px hsla(64deg, 79%, 79%, 0.7), inset 0px 0px 20px 15px hsla(64deg, 79%, 79%, 0.7);
+  transform: scale(1.4);
 }
 .logo:active {
   box-shadow: none;
@@ -644,23 +644,22 @@ body {
   box-shadow: 0px 0px 20px 5px hsla(45deg, 70%, 57%, 0.7), inset 0px 0px 20px 15px hsla(45deg, 70%, 57%, 0.7);
 }
 
-.logoLink {
+.logo-link {
   font-family: "Oleo Script Swash Caps", cursive;
   font-size: 2.3rem;
   text-decoration: none;
+  text-align: center;
+  font-weight: 900;
   background-image: linear-gradient(-225deg, #c47d0c 0%, #eef4a1 38%, #dfbb45 50%, #eef4a1 68%, #c47d0c 100%);
   background-size: 95%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  text-align: center;
-  font-weight: 900;
 }
 
 nav {
-  transition: all 0.1s ease;
-  padding: 1vh 1rem;
   padding: 0 1rem;
+  transition: all 0.1s ease;
 }
 nav ul {
   display: flex;
@@ -670,29 +669,29 @@ nav ul {
   padding: 0;
   list-style: none;
 }
-nav li button {
-  font-family: "Oswald", sans-serif;
-  border: 2px solid black;
+nav button {
   margin: 2vh 1rem;
   padding: 1vh 0;
   width: 7rem;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  border: 2px solid black;
   border-radius: 10px;
   background-image: linear-gradient(-25deg, hsl(283deg, 39%, 63%) 0%, hsl(283deg, 39%, 63%) 30%, hsl(283deg, 39%, 72%) 50%, hsl(283deg, 39%, 63%) 70%, hsl(283deg, 39%, 63%) 100%, hsl(184deg, 6%, 81%) 99%);
-  text-align: center;
 }
-nav li button:hover {
-  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+nav button:hover {
   position: relative;
   bottom: 5px;
   right: 5px;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
   transition: bottom, right, 0.2s ease;
 }
-nav li button:active {
+nav button:active {
   top: 0px;
   left: 0px;
-  transition: bottom, right, 0.1s ease;
   box-shadow: none;
   box-shadow: inset 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+  transition: bottom, right, 0.1s ease;
 }
 
 footer {
@@ -710,12 +709,11 @@ footer {
 }
 footer .btn-font {
   margin: 0.2rem 0.3em 0.2rem 0;
-  border: 2px solid black;
-  display: flex;
-  background-color: hsl(283deg, 34%, 60%);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
+  border: 2px solid black;
+  background-color: hsl(283deg, 34%, 60%);
 }
 footer .btn-font:hover {
   border: 2px solid #eef4a1;
@@ -726,21 +724,21 @@ footer .btn-font:active {
   color: hsl(45deg, 70%, 57%);
 }
 footer p {
-  text-align: center;
   margin: 0.3em 0;
+  text-align: center;
 }
 
-button.navButton.bigFontsBtns {
-  font-size: 1.4rem;
+button.nav-btn.big-fonts-btn {
   width: 9.5rem;
+  font-size: 1.4rem;
 }
 
-button.fontButtonActive {
+button.font-btn-active {
   border: 2px solid hsl(45deg, 70%, 57%);
   color: hsl(45deg, 70%, 57%);
 }
 
-footer.bigFontsFooter {
+footer.big-fonts-footer {
   font-size: 0.9rem;
 }
 

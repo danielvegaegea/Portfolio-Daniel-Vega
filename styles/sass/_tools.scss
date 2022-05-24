@@ -13,6 +13,7 @@ $cMainBlockBg: hsl(55, 100%, 95%);
 // Sidebar
 $cSidebarBg: hsl(283, 39%, 63%);
 $cSidebarBg2: hsl(283, 39%, 72%);
+$cSidebarBorder: black;
 $gSideBar: linear-gradient(
   90deg,
   $cSidebarBg 0%,
@@ -71,6 +72,8 @@ $cFontButton: #eef4a1;
 $cFontButtonActive: hsl(45, 70%, 57%);
 $cFontBottonBg: hsl(283, 34%, 60%);
 
+// Modal
+$cModalBackground: rgba(0, 0, 0, 0.5);
 // Main
 $cMainTitleBg: hsl(283, 34%, 40%);
 //$cTitle: hsl(283, 65%, 28%);

@@ -33,6 +33,5 @@ sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
 
 ToDo:
-Transiciones para modal y btn-menu
-Intentar congelar fondo en modal.
 Revisar codigo para buenas costumbres.
+Crear las otras tres webs.

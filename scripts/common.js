@@ -8,13 +8,12 @@ let burgerMenuSt = false;
 //    Font Button
 const fontBtn = document.getElementsByClassName('btn-font')[0];
 let bigFontsSt = false;
-const sideBtns = document.getElementsByClassName('navButton');
+const sideBtns = document.getElementsByClassName('nav-btn');
 const footer = document.getElementsByTagName('footer')[0];
 const main = document.getElementsByTagName('main')[0];
 
 //    Modal
 let modalTrigger = document.getElementsByClassName('zoom');
-//let modalTrigger = document.getElementsByClassName('zoom')[0];
 const modalContainer = document.getElementsByClassName('modal-container')[0];
 const imageModalContainer = document.getElementsByClassName(
   'modal-image-container',
@@ -23,7 +22,7 @@ const modalClose = document.getElementsByClassName('close-btn')[0];
 
 //    Disabled but maintained as alternative.
 //const burgerBtnStyle = getComputedStyle(burgerBtn);
-//getElementsByClassName('navButton');
+//getElementsByClassName('nav-btn');
 //const mainMenu = document.getElementsByTagName('nav')[0];
 
 // Function
@@ -45,19 +44,19 @@ const bigFonts = function (event) {
   // If button push, sets classes to increase font-size in several tags
   // and sets the button as active.
   if (!bigFontsSt) {
-    fontBtn.classList.add('fontButtonActive');
-    footer.classList.add('bigFontsFooter');
-    main.classList.add('bigFontsMain');
+    fontBtn.classList.add('font-btn-active');
+    footer.classList.add('big-fonts-footer');
+    main.classList.add('big-fonts-main');
     Array.from(sideBtns).forEach((sideBtn) => {
-      sideBtn.classList.add('bigFontsBtns');
+      sideBtn.classList.add('big-fonts-btn');
     });
     bigFontsSt = true;
   } else {
-    fontBtn.classList.remove('fontButtonActive');
-    footer.classList.remove('bigFontsFooter');
-    main.classList.remove('bigFontsMain');
+    fontBtn.classList.remove('font-btn-active');
+    footer.classList.remove('big-fonts-footer');
+    main.classList.remove('big-fonts-main');
     Array.from(sideBtns).forEach((sideBtn) => {
-      sideBtn.classList.remove('bigFontsBtns');
+      sideBtn.classList.remove('big-fonts-btn');
     });
     bigFontsSt = false;
   }

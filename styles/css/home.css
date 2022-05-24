@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
 @media only screen and (min-width: 2440px) {
-  main.bigFontsMain {
+  main.big-fonts-main {
     font-size: calc(2.6rem + 0.32vw);
   }
 }
@@ -134,7 +134,7 @@ main .title .image img {
   border: 2px solid black;
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
 }
-main.bigFontsMain {
+main.big-fonts-main {
   font-size: calc(1.6rem + 0.32vw);
 }
 main .modal-container {
@@ -218,9 +218,6 @@ main .modal-open .image-container {
 }
 main .modal-open .image-container img {
   max-height: 91vh;
-}
-main .modal-close {
-  border: 3px solid red;
 }
 main .modal-close .modal {
   transition: transform 0.5s ease;

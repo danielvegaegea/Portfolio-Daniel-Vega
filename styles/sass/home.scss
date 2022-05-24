@@ -126,7 +126,7 @@ main {
     }
   }
 
-  &.bigFontsMain {
+  &.big-fonts-main {
     font-size: calc(1.6rem + 0.32vw);
   }
 
@@ -136,16 +136,15 @@ main {
     @include tools.flexing(row, none, center, center);
     opacity: 0;
     visibility: hidden;
-    //z-index: 1;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: tools.$cModalBackground;
   }
   .modal {
     @include tools.flexing(row, none, center, flex-start);
-    //z-index: 2;
+    //z-index: 3;
     background-color: tools.$cMainBlockBg;
     border-radius: 15px;
     border: 2px solid tools.$cDefaultBorder;
@@ -216,7 +215,6 @@ main {
     }
   }
   .modal-close {
-    border: 3px solid red;
     & .modal {
       transition: transform 0.5s ease;
       transform: scale(0.1);

@@ -1,66 +1,79 @@
 @use './tools' as tools;
 
-// BIG SCREEN
+// BIG SCREEN SECTION
 @media only screen and (min-width: 2440px) {
   body {
-    .sidebarContainer {
+    .sidebar-container {
       width: 13vw;
       max-width: unset;
+
       & .sidebar {
         width: 13vw;
         max-width: unset;
       }
     }
+
     footer {
       font-size: 1rem;
     }
-    // BIG FONTS
-    & button.navButton.bigFontsBtns {
+
+    // BIG FONTS SUBSECTION
+    & button.nav-btn.big-fonts-btn {
       font-size: 1.8rem;
       width: 12rem;
     }
-    & footer.bigFontsFooter {
+
+    & footer.big-fonts-footer {
       font-size: 1.4rem;
     }
   }
 }
 
-// TABLET
+// TABLET section
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  //, (orientation: portrait)
-  body .sidebarContainer {
-    min-width: 0;
-    max-width: unset;
+  //, (orientation: portrait not used)
+  body .sidebar-container {
     width: 0;
     height: 0;
+    min-width: 0;
+    max-width: unset;
+
     & .sidebar {
-      background-image: tools.$gSideBarMq;
-      max-width: unset;
-      width: 100vw;
-      height: 10vh;
-      max-height: 5rem;
       top: 0;
       bottom: unset;
       left: 0;
+
+      width: 100vw;
+      height: 10vh;
+      max-height: 5rem;
+
+      background-image: tools.$gSideBarMq;
+      max-width: unset;
+
       & header {
         @include tools.flexing(row, none, space-between, center);
         height: 10vh;
         max-height: 5rem;
+
         & .logo {
           margin: 0;
           height: 35px;
           width: 57px;
           border-radius: 10px;
-          & .logoLink {
+
+          & .logo-link {
             font-size: 1.26rem;
           }
         }
+
         & nav {
           @include tools.flexing(row, none, flex-start, center);
           padding: 0 1vw 0 3vw;
+
           & ul {
             @include tools.flexing(row, nowrap, space-between, center);
             width: 80vw;
+
             button {
               padding: 0;
               width: calc(2.4rem + 12vw);
@@ -71,6 +84,7 @@
           }
         }
       }
+
       & footer {
         position: fixed;
         left: -1vw;
@@ -83,56 +97,63 @@
         @include tools.giveShadow(3);
       }
     }
-    // BIG FONTS
-    & button.navButton.bigFontsBtns {
+    // BIG FONTS SUBSECTION
+    & button.nav-btn.big-fonts-btn {
       font-size: 1.2rem;
     }
-    & footer.bigFontsFooter {
+
+    & footer.big-fonts-footer {
       font-size: 1.6rem;
     }
   }
 }
-
-// MOBILE
+// revised? v
+// MOBILE SECTION
 @media only screen and (max-width: 480px) {
-  body .sidebarContainer {
-    min-width: 0;
+  body .sidebar-container {
     width: 0;
+    min-width: 0;
+
     & .sidebar {
-      background-image: tools.$gSideBarMq;
-      max-width: unset;
       left: 0;
+      background-image: tools.$gSideBarMq;
+      @include tools.flexing(row, wrap, flex-start, flex-start);
       height: 4.8rem;
       width: 98vw;
-      //border: 2px solid tools.$cDefaultBorder;
-      border-radius: 0 0 20px 0;
+      max-width: unset;
       padding: 0;
-      @include tools.flexing(row, wrap, flex-start, flex-start);
+
+      border-radius: 0 0 20px 0;
+
       & header {
         @include tools.flexing(row, nowrap, space-between, center);
+        height: 6.5rem;
         max-height: 5rem;
         width: 100%;
         padding: 0 0.4rem;
-        height: 6.5rem;
+
         & .logo {
           margin: 0;
           height: 35px;
           width: 56px;
           border-radius: 10px;
-          & .logoLink {
+
+          & .logo-link {
             font-size: 1.26rem;
           }
         }
+
         & ul {
-          // All comments here trying to give two lines menu.
           @include tools.flexing(row, wrap, flex-start, flex-start);
           width: 14rem;
           margin: 0;
         }
+
         & nav {
           @include tools.flexing(row, wrap, flex-start, flex-start);
           width: 14rem;
           padding: 0;
+
           & li button {
             width: calc(2.4rem + 12vw);
             padding: 0.5vh 0;
@@ -140,46 +161,48 @@
             margin: 0.2rem 0.4rem;
           }
         }
+
         .btn-menu {
-          //@include tools.flexing(row, none, center, center);
           visibility: visible;
+          font-size: 1.4rem;
           color: tools.$cLogoText3;
           background-color: tools.$cLogo;
-          font-size: 1.4rem;
           border-radius: 5px;
           border: 1px solid tools.$cLogoBorder;
+
           &:hover {
             @include tools.giveShadow(1);
             position: relative;
             bottom: 5px;
             right: 5px;
           }
+
           &:active {
             @include tools.giveShadow(2);
             color: tools.$cLogoText2;
           }
         }
       }
+
       & footer {
         position: fixed;
         left: -1vw;
         bottom: -3.4vh;
-        padding: 2vw;
-        border-radius: 0;
         width: 102vw;
         height: 2rem;
+        padding: 2vw;
         font-size: calc(0.9rem + 1vw);
+        border-radius: 0;
         @include tools.giveShadow(3);
       }
     }
-    // BIG FONTS
-    & button.navButton.bigFontsBtns {
+    // BIG FONTS SUBSECTION
+    & button.nav-btn.big-fonts-btn {
       font-size: 1rem;
       width: 6.2rem;
     }
-    & footer.bigFontsFooter {
+    & footer.big-fonts-footer {
       font-size: 1.4rem;
     }
   }
-  //animation here
 }
