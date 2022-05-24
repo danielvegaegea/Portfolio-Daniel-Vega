@@ -553,7 +553,7 @@ body {
   align-items: center;
 }
 
-.shadow1 {
+.footer-shadow {
   box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
 }
 
@@ -742,4 +742,4 @@ footer.big-fonts-footer {
   font-size: 0.9rem;
 }
 
-/*# sourceMappingURL=common.css.map */
+/*# sourceMappingURL=shared-sidebar.css.map */

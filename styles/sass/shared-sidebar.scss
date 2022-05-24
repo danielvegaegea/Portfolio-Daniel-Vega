@@ -1,6 +1,6 @@
 @use './tools' as tools;
 @import './normalize';
-@import './_common-mq';
+@import './shared-sidebar-mq';
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap');
@@ -27,7 +27,7 @@ body {
   @include tools.flexing(row, none, flex-start, center);
 }
 
-.shadow1 {
+.footer-shadow {
   @include tools.giveShadow(1);
 }
 

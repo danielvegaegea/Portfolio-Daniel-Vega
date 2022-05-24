@@ -29,10 +29,12 @@ https://fonts.google.com/specimen/Varela+Round
 https://fonts.google.com/specimen/Play
 
 sass:
+sass ./styles/sass/shared-sidebar.scss ./styles/css/shared-sidebar.css -w
+sass ./styles/sass/shared-main.scss ./styles/css/shared-main.css -w
+old:
 sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
 
 ToDo:
-Mejorar fuentes para negrita e itálica.
 Revisar codigo para buenas costumbres.
 Crear las otras tres webs.
