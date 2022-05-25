@@ -114,9 +114,11 @@ main .card .compare {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1em;
 }
 main .card .compare div {
-  width: 48%;
+  box-shadow: 10px 10px 10px hsla(0deg, 0%, 0%, 0.5);
+  width: 49%;
 }
 main .card .float {
   max-width: 30vw;
@@ -167,6 +169,12 @@ main .card li::marker {
 main.big-fonts-main {
   font-size: calc(1.6rem + 0.32vw);
 }
+main.big-fonts-main div.modal-image-container img {
+  max-height: 83vh;
+}
+main.big-fonts-main div.modal-image-container span {
+  font-size: 90%;
+}
 main .modal-container {
   position: fixed;
   top: 0;
@@ -187,6 +195,7 @@ main .modal {
   justify-content: center;
   align-items: flex-start;
   max-width: 97vw;
+  max-height: 97vh;
   background-color: hsl(55deg, 100%, 95%);
   border-radius: 15px;
   border: 2px solid black;
@@ -205,18 +214,18 @@ main .modal > div .image-caption {
   font-weight: 600;
   padding-left: 0.5rem;
 }
-main .modal .image-container {
+main .modal .modal-image-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 99%;
   max-width: 97vw;
   max-height: 97vh;
 }
-main .modal .image-container img {
+main .modal .modal-image-container img {
   border: 1px solid black;
-  max-height: 90vh;
+  max-height: 87vh;
   margin-bottom: 0.2rem;
 }
 main .modal button {

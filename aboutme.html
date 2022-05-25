@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=P, initial-scale=1.0" />
-    <title>Placeholder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/ico"
+      sizes="32x32"
+      href="./images/icon/infinity.ico"
+    />
+    <link rel="stylesheet" href="styles/css/shared-sidebar.css" />
+    <link rel="stylesheet" href="styles/css/shared-main.css" />
+    <!-- Disabled for no use by now.
+    <link rel="stylesheet" href="styles/css/home.css" /> -->
+    <title>Daniel Vega Egea - Página Personal | Home</title>
   </head>
-  <body></body>
-  <h1>ABOUT ME - Placeholder</h1>
+  <body>
+    <div class="body-container">
+      <div class="sidebar-container">
+        <div class="sidebar">
+          <header>
+            <button type="button" class="btn-menu">☰</button>
+            <div class="logo shadow1">
+              <a class="logo-link" href="./index.html">DVE</a>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='index.html'"
+                  >
+                    Inicio
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='blog.html'"
+                  >
+                    Blog
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='aboutme.html'"
+                  >
+                    Sobre Mi
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='aboutweb.html'"
+                  >
+                    Sobre Web
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <footer class="footer-shadow">
+            <button type="button" class="btn-font">🗚</button>
+            <p>2022 Daniel Vega Egea</p>
+          </footer>
+        </div>
+      </div>
+      <main>
+        <div class="modal-container modal-close">
+          <div class="modal">
+            <div>
+              <div class="image-container modal-image-container"></div>
+            </div>
+            <button type="button" class="close-btn" name="close">X</button>
+          </div>
+        </div>
+        <div class="title">
+          <div class="main-title">
+            <h1>Sobre Mi</h1>
+          </div>
+        </div>
+
+        <article class="card presentation">
+          <span class="post-date">Martes, 24 de Mayo de 2022</span>
+          <h2>Descripción</h2>
+          <p class="drop-caps">
+            Voy a tomarme la libertad de dividir esta sección en dos partes. Las
+            personas contamos con <em>múltiples facetas</em> y la vida me ha
+            enseñado que la <em>faceta</em> más <em>distendida</em> que una
+            persona puede tener, puede acabar llevándote a una prometedora
+            carrera profesional de mejor forma que el “<em>serio</em>” y
+            <em>abultado</em> <strong>Currículum Vitae</strong> que antaño
+            pedían hasta para vender en un estanco.
+          </p>
+          <p>
+            A modo de resumen, diré que he dedicado gran parte de mi vida a la
+            <em>informática</em>, tanto de forma “<em>reglada</em>” como
+            “<em>ocupacional</em>” e incluso de una forma “<em>friki</em>” (si
+            ustedes me permiten esta última expresión). De igual manera, he
+            invertido gran cantidad de tiempo en el mundo de los
+            <em>videojuegos</em>, no solo desde la perspectiva de quien coge un
+            <em>mando</em> (u otro <em>periférico de entrada</em>) y se pone a
+            jugar, sino también desde la perspectiva empresarial y de diseño. Lo
+            considero un mundo apasionante y en constante crecimiento, por lo
+            que no se me antoja una pérdida de tiempo el invertirlo en analizar
+            lo que se hace “<em>tras la cortina</em> y
+            <em>entre bambalinas</em>”, si me entienden. Por último gozo de un
+            buen nivel de <em>inglés</em>, que cultivo pese a no haber podido
+            viajar a ningún país angloparlante para perfeccionarlo.
+          </p>
+        </article>
+        <article class="card presentation">
+          <span class="post-date">Actualizado: Martes, 24 de Mayo de 2014</span>
+          <h2>Formación Reglada y Ocupacional</h2>
+          <p class="drop-caps">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+            cumque minima. Molestiae sunt nam dignissimos nobis voluptas
+            voluptatem eligendi velit. Quod impedit distinctio, minus quae
+            inventore ducimus molestias nesciunt exercitationem.
+          </p>
+        </article>
+      </main>
+    </div>
+    <script src="./scripts/shared.js"></script>
+  </body>
 </html>

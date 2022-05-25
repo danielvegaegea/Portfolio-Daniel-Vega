@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=P, initial-scale=1.0" />
-    <title>Placeholder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/ico"
+      sizes="32x32"
+      href="./images/icon/infinity.ico"
+    />
+    <link rel="stylesheet" href="styles/css/shared-sidebar.css" />
+    <link rel="stylesheet" href="styles/css/shared-main.css" />
+    <!-- Disabled for no use by now.
+    <link rel="stylesheet" href="styles/css/home.css" /> -->
+    <title>Daniel Vega Egea - Página Personal | Home</title>
   </head>
-  <body></body>
-  <h1>ABOUT WEB - Placeholder</h1>
+  <body>
+    <div class="body-container">
+      <div class="sidebar-container">
+        <div class="sidebar">
+          <header>
+            <button type="button" class="btn-menu">☰</button>
+            <div class="logo shadow1">
+              <a class="logo-link" href="./index.html">DVE</a>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='index.html'"
+                  >
+                    Inicio
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='blog.html'"
+                  >
+                    Blog
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='aboutme.html'"
+                  >
+                    Sobre Mi
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='aboutweb.html'"
+                  >
+                    Sobre Web
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <footer class="footer-shadow">
+            <button type="button" class="btn-font">🗚</button>
+            <p>2022 Daniel Vega Egea</p>
+          </footer>
+        </div>
+      </div>
+      <main>
+        <div class="modal-container modal-close">
+          <div class="modal">
+            <div>
+              <div class="image-container modal-image-container"></div>
+            </div>
+            <button type="button" class="close-btn" name="close">X</button>
+          </div>
+        </div>
+        <div class="title">
+          <div class="main-title">
+            <h1>Sobre Web</h1>
+          </div>
+        </div>
+
+        <article class="card presentation">
+          <span class="post-date">Martes, 24 de Mayo de 2022</span>
+          <h2>Descripción</h2>
+          <p class="drop-caps">
+            En esta página voy a registrar el origen de esta web, su objetivo y
+            los medios que he usado para realizarla.
+          </p>
+          <p>
+            Esta página nace como un proyecto de mitad de curso para
+            <strong>General Assembly</strong> por parte de
+            <strong>Adecco</strong>. Mi iniciativa, en un proyecto que
+            requerimientos aparte, fue propuesto como tema libre, ha consistido
+            en un inicio de <em>página personal</em> que es la que estáis viendo
+            en estos momentos. Solo el tiempo dirá si este proyecto sale
+            adelante o no, pues largo es el camino del aprendizaje que necesito
+            para hacer este sitio como yo lo tengo en mente.
+          </p>
+          <p>
+            Más abajo, en esta misma <em>página</em> pero en otras
+            <em>tarjetas</em>, iré dejando los <em>recursos</em> utilizados para
+            el desarrollo del <em>sitio</em>, tanto a nivel de
+            <em>software</em> como de <em>webs de recursos</em>.
+          </p>
+        </article>
+        <article class="card presentation">
+        <span class="post-date">Actualizado: Miércoles, 25 de Mayo de 2014</span>
+        <h2>Software</h2>
+          <p>
+            <ul>
+            <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+            <li><a href="https://www.mozilla.org/es-ES/firefox/developer/">Firefox Developer Edition</a></li>
+            <li><a href="https://github.com/">GitHub</a></li>
+          </ul>
+        </p>
+        </article>
+        <article class="card presentation">
+          <span class="post-date">Actualizado: Miércoles, 25 de Mayo de 2014</span>
+          <h2>Recursos Gráficos y Herramientas</h2>
+          <p>
+            <ul>
+              <li><a href="https://getbootstrap.com/docs/3.4/components/">Bootstrap Components</a></li>
+              <li><a href="https://htmlcolorcodes.com/es/tabla-de-colores/">HTML Color Codes</a></li>
+              <li><a href="https://webgradients.com/">Web Gradients</a></li>
+              <li><a href="https://www.flaticon.com">Flaticon - Vector Icons and Stickers</a></li>  
+              <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+              <li><a href="https://caniuse.com/">Can I Use?</a></li>
+              <li><a href="https://developer.mozilla.org/es/">MDN</a></li>
+              <li><a href="https://www.peko-step.com/es/tool/hslrgb.html">Peko-Step - Convertidor de color</a></li>
+              <li><a href="https://unicode-table.com/es/">Unicode Table</a></li>
+            </ul>
+          </p>
+        </article>  
+        <article class="card presentation">
+        <span class="post-date">Actualizado: Miércoles, 25 de Mayo de 2014</span>
+        <h2>Información</h2>
+          <p>
+            <ul>
+              <li><a href="https://css-tricks.com/creating-a-smart-navbar-with-vanilla-javascript/">CSS Tricks - Navbar with Vanilla JS</a></li>
+              <li><a href="https://css-tricks.com/finally-it-will-be-easy-to-change-the-color-of-list-bullets/">CSS Tricks - Color of bullets</a></li>
+              <li><a href="https://stackoverflow.com/questions/61831160/how-to-reuse-a-navigation-bar-across-different-html-pages-with-css-and-js">Stack Overflow - Reuse Navigation Bar</a></li>
+              <li><a href="https://stackoverflow.com/questions/315845/should-i-avoid-using-text-align-justify">Stack Overflow - Text Justify</a></li>
+              <li><a href="https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/">Free Code Camp - Reuse a Header and Footer</a></li>
+              <li><a href="https://bootcamp.uxdesign.cc/gradient-text-in-css-609068d3f953">Bootcamp - Gradient Text in CSS</a></li>
+              <li><a href="https://codeguide.co/">Code Guide - Standards for developing consistent, flexible, and sustainable HTML and CSS</a></li>
+          </ul>
+        </p>
+        </article>
+      </main>
+    </div>
+    <script src="./scripts/shared.js"></script>
+  </body>
 </html>

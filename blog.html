@@ -1,11 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=P, initial-scale=1.0" />
-    <title>Placeholder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/ico"
+      sizes="32x32"
+      href="./images/icon/infinity.ico"
+    />
+    <link rel="stylesheet" href="styles/css/shared-sidebar.css" />
+    <link rel="stylesheet" href="styles/css/shared-main.css" />
+    <!-- Disabled for no use by now.
+    <link rel="stylesheet" href="styles/css/home.css" /> -->
+    <title>Daniel Vega Egea - Página Personal | Home</title>
   </head>
-  <body></body>
-  <h1>BLOG - Placeholder</h1>
+  <body>
+    <div class="body-container">
+      <div class="sidebar-container">
+        <div class="sidebar">
+          <header>
+            <button type="button" class="btn-menu">☰</button>
+            <div class="logo shadow1">
+              <a class="logo-link" href="./index.html">DVE</a>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='index.html'"
+                  >
+                    Inicio
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='blog.html'"
+                  >
+                    Blog
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='aboutme.html'"
+                  >
+                    Sobre Mi
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="nav-btn"
+                    onclick="window.location='aboutweb.html'"
+                  >
+                    Sobre Web
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <footer class="footer-shadow">
+            <button type="button" class="btn-font">🗚</button>
+            <p>2022 Daniel Vega Egea</p>
+          </footer>
+        </div>
+      </div>
+      <main>
+        <div class="modal-container modal-close">
+          <div class="modal">
+            <div>
+              <div class="image-container modal-image-container"></div>
+            </div>
+            <button type="button" class="close-btn" name="close">X</button>
+          </div>
+        </div>
+        <div class="title">
+          <div class="main-title">
+            <h1>Blog</h1>
+          </div>
+        </div>
+
+        <article class="card presentation">
+          <span class="post-date">Martes, 24 de Mayo de 2022</span>
+          <h2>Descripción</h2>
+          <p class="drop-caps">
+            En esta sección pretendo dejar constancia de distintos artículos que
+            he ido publicando en varios medios a lo largo de los años. Algunas
+            fotos se cambiarán con respecto a las originales por cuestiones
+            nimias como la <em>resolución</em> o la imposibilidad de encontrar
+            la <em>fuente</em> de la misma.
+          </p>
+          <p>
+            Por otra parte, se corregirán <em>faltas ortográficas</em> sin un
+            previo compromiso de encontrarlas todas. A fin de cuentas, son
+            muchas las horas de redacción que habrá y no siempre son
+            <em>faltas</em> evidentes. En cualquier caso se hará lo posible por
+            mantener la ortografía al nivel más alto posible.
+          </p>
+        </article>
+        <article class="card presentation">
+          <span class="post-date">Martes, 24 de Mayo de 2014</span>
+          <h2>Fuerzas de flaqueza</h2>
+          <p class="drop-caps">
+            Cuando se empezó a realizar los borradores de lo que sería
+            <strong>Regreso al Futuro</strong>, la idea inicial era que el coche
+            fuera una especie de nevera y que al final viajaran al presente
+            usando un área de pruebas militares. Todo esto cambió a mejor
+            precisamente por la falta de dinero y se decidió que la película
+            acabara donde empezó, esto es, en <strong>Hill Valley</strong>. Los
+            icónicos teletransportadores de <strong>Star Trek</strong> nacieron
+            por la falta de presupuesto para hacer una nave a tamaño real que
+            los protagonistas pudieran llevar a sus exploraciones.
+          </p>
+          <p>
+            Los videojuegos no son distintos en este sentido. Hay cosas, señas
+            de identidad, que nacen de la falta de recursos con las que lidiaban
+            los programadores a la hora de crear sus juegos.
+          </p>
+          <div class="image-container landscape float right zoom">
+            <img
+              class="image"
+              src="./images/blog/roxy_p10.png"
+              alt="Retrato de Daniel Vega."
+            />
+            <p class="hidden-caption">Comparación de Palette Swap.</p>
+          </div>
+          <p>
+            Vamos a comenzar hablando de los trajes alternativos en los
+            <strong>Street Fifghter</strong>, <strong>Final Fight</strong> y
+            otros <em>Beat’n Ups</em> de la época. A la hora de dibujar
+            personajes en estas máquinas antiguas, no podíamos contar con los
+            colores que nos diera la gana. La memoria y los recursos eran
+            limitados por lo que acabábamos usando una paleta reducida de
+            colores. ¿Qué es una paleta? Imaginémosla como las paletas de los
+            pintores, salvo por la incapacidad que tendremos para mezclar los
+            colores.
+          </p>
+          <p>
+            Supongamos que queremos dibujar a un personaje, pero solo tenemos 4
+            colores a nuestra disposición. Uno negro que usaremos para el fondo
+            de la imagen, uno de color piel para la cara, uno marrón para el
+            pelo y el bigote y uno rojo para el traje. Ya tenemos nuestro muñeco
+            dibujado, pero ¿Qué pasaría si cambiamos el marrón por amarillo en
+            esa paleta de cuatro colores? La respuesta es que todo lo que
+            hubiera en la imagen que fuera marrón pasaría a ser amarillo, por lo
+            que tendríamos un pelo amarillo (rubio) y un bigote de similar
+            color.
+          </p>
+          <div class="image-container portrait float left zoom">
+            <img
+              class="image"
+              src="./images/blog/zangief.jpg"
+              alt="Retrato de Daniel Vega."
+            />
+            <p class="hidden-caption">
+              Es lo malo de tener la boca del color de tus calzones.
+            </p>
+          </div>
+          <p>
+            Esto mismo se ha usado los juegos para simular varios tipos de
+            personajes o de trajes. Cambias el <em>blanco</em> de
+            <strong>Ryu</strong> por <em>azul</em> y obtienes a un
+            <strong>Ryu</strong> con <em>kimono azul</em>. ¿Cual es el problema?
+            Cuando cambiamos el <em>rojo</em> de los pantalones de
+            <strong>Zangief</strong> por <em>azul</em>, su boca, que es del
+            mismo color también pasa a ser <em>azul</em>. Este truco se usó en
+            los juegos tipo <strong>Final Fight</strong> para crear la sensación
+            de tener más variedad de personajes. Por poner un ejemplo, en las
+            <strong>Tortugas Ninja</strong> los <em>foot soldiers</em> tenían
+            trajes <em>violeta</em>, <em>rojo</em>, <em>verde</em> o
+            <em>azul</em>, pero las animaciones eran las mismas consumiendo
+            menos memoria. Lo mismo se aplicaba a
+            <strong>Mortal Kombat</strong> y los <em>frames</em> reaprovechados
+            entre <strong>Sub-Zero</strong> y <strong>Scorpion</strong>.
+          </p>
+          <p>
+            Vamos con otra seña de identidad. En este caso hablaremos del
+            <em>bigote</em> de <strong>Mario</strong> y <strong>Luigi</strong>.
+            Este bigote existe por que, a la hora de dibujar sus caras en estos
+            juegos tan antiguos, había tan pocas líneas de <em>pixeles</em> que
+            no se veía el detalle de la boca. Si la boca es solo una línea de
+            puntos, de que color la ponemos para que se reconozca. Si ponemos
+            esa línea roja entonces parecerá que <strong>Mario</strong> se
+            pintaba los labios y no queda bien. La opción de poner otro tono de
+            naranja tampoco iba bien. Al final consideraron que lo más cómodo
+            era ponerla del color de su pelo y plantearlo con bigote y punto.
+            Hoy en día hay <em>polígonos</em> y <em>alta definición</em>, pero
+            ese bigote ya ha quedado como parte de él.
+          </p>
+          <p>
+            La niebla de <strong>Silent Hill</strong> existe solo para poder
+            dibujar el escenario a muy corta distancia del personaje. Mientras
+            menos escenario se dibuje, más detalle puedes ponerle a dicho
+            escenario. El truco está en dibujar muy poco escenario delante del
+            protagonista y luego poner la niebla para disimular lo que se llama
+            <em>popping</em> (aparición de cosas delante del personaje). Esa
+            niebla, creada en <strong>Ps1</strong>, se hace parte de la trama y
+            reaparece en el resto de continuaciones, salvo en
+            <strong>Silent Hill 4</strong> que obviamente tiene peor calidad
+            gráfica que los otros al tener que dibujar todo el escenario. Lo
+            mismo se aplica a la oscuridad de los interiores donde solo contamos
+            con una linterna.
+          </p>
+          <div class="compare">
+            <div class="image-container zoom">
+              <img
+                class="image"
+                src="./images/blog/Silent Hill 3 Fog.jpg"
+                alt="Retrato de Daniel Vega."
+              />
+              <p class="hidden-caption">Silent Hill 3 con niebla.</p>
+            </div>
+            <div class="image-container zoom">
+              <img
+                class="image"
+                src="./images/blog/Silent Hill 3 No Fog.jpg"
+                alt="Retrato de Daniel Vega."
+              />
+              <p class="hidden-caption">Silent Hill 3 sin niebla.</p>
+            </div>
+          </div>
+          <p>
+            El <em>chip de sonido</em> que tiene la
+            <strong>Megadrive</strong> es sensiblemente peor que el de la
+            <strong>Super Nintendo</strong> quedando patente sobre todo a la
+            hora de realizar temas orquestales. Esto no impidió al maestro
+            <strong>Yuzo Koshiro</strong> plantear una espectacular banda sonora
+            para los <strong>Street of Rage</strong>. Dado que la
+            <strong>Megadrive</strong> se mueve con más comodidad con la música
+            sintética y aprovechando la ambientación <em>ochentera</em> de los
+            títulos, <strong>Koshiro</strong> hace unas composiciones que
+            todavía hoy se recuerdan y tararean por los que lo jugamos antaño.
+            De nuevo, hacemos algo grande aprovechando las debilidades.
+          </p>
+          <p>
+            Voy a terminar hablando de otro de los grandes de
+            <strong>Konami</strong>. Cuando le piden a
+            <strong>Hideo Kojima</strong> que haga un juego ambientado en la
+            guerra (fueron tiempos de grandes películas sobre el género),
+            nuestro amigo <strong>Hideo</strong> se encuentra con una máquina
+            (la <strong>MSX</strong>) limitada en cuanto al numero de personajes
+            que puede mantener en pantalla. Una guerra de un tipo contra grupos
+            de tres o cuatro enemigos queda rara. <strong>Kojima</strong>,
+            espabilado como es, decide que en lugar de guerra tal cual, lo haría
+            como infiltración táctica, esto es, pasar desapercibido al enemigo y
+            colarse en su base. Los ejércitos se convierten en pequeñas
+            patrullas de dos o tres personas (más coherente) y lo aderezamos con
+            una genial trama. ¿Qué obtenemos? Una de las mejoras sagas de todos
+            los tiempos nacida de la incapacidad de poner grandes ejércitos en
+            un ordenador que en aquella época era puntero como fue el
+            <strong>MSX</strong>.
+          </p>
+          <div class="image-container landscape float right zoom">
+            <img
+              class="image"
+              src="./images/blog/metal-gear.jpg"
+              alt="Retrato de Daniel Vega."
+            />
+            <p class="hidden-caption">
+              Somos pocos en pantalla, pero lo pasamos bien.
+            </p>
+          </div>
+          <p>
+            Si os paráis a analizar todo esto, veremos todo el paralelismo que
+            existe entre el sector del ocio electrónico y el del cine. En ambos
+            casos tenemos algo que comenzó con unos escasos medios y
+            presupuestos, y que gracias a ello estimuló la imaginación de los
+            creadores creando así obras icónicas.
+          </p>
+          <p>
+            Hoy en día no nos encontramos esas limitaciones tan pronunciadas.
+            Ahora contamos con el <em>Chroma Key</em> (los fondos verdes) para
+            las películas y con mucha <em>memoria</em> y <em>recursos</em> en
+            los videojuegos. Sin duda esto ha hecho ganar en espectacularidad a
+            ambos medios, pero no puedo evitar tener la sensación de que ese
+            puntito de imaginación y perseverancia que había en los
+            programadores de antaño se ha perdido también al llegar esta era de
+            grandes posibilidades.
+          </p>
+        </article>
+      </main>
+    </div>
+    <script src="./scripts/shared.js"></script>
+  </body>
 </html>

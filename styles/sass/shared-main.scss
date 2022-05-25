@@ -104,9 +104,11 @@ main {
     .compare {
       // Used to put two images side by side for comparing purposes.
       @include tools.flexing(row, none, space-between, center);
+      margin-bottom: 1em;
 
       & div {
-        width: 48%;
+        @include tools.giveShadow(1);
+        width: 49%;
       }
     }
 
@@ -170,6 +172,14 @@ main {
 
   &.big-fonts-main {
     font-size: calc(1.6rem + 0.32vw);
+    & div.modal-image-container {
+      img {
+        max-height: 83vh;
+      }
+      span {
+        font-size: 90%;
+      }
+    }
   }
 
   /*   [ MODAL ] */
@@ -188,6 +198,7 @@ main {
     padding: 0.7rem;
     @include tools.flexing(row, none, center, flex-start);
     max-width: 97vw;
+    max-height: 97vh;
     background-color: tools.$cMainBlockBg;
     border-radius: 15px;
     border: 2px solid tools.$cDefaultBorder;
@@ -200,20 +211,21 @@ main {
       @include tools.flexing(column, wrap, center, center);
 
       & .image-caption {
+        //font-size: 90%;
         font-weight: 600;
         padding-left: 0.5rem;
       }
     }
 
-    & .image-container {
-      @include tools.flexing(column, nowrap, center, flex-start);
+    & .modal-image-container {
+      @include tools.flexing(column, nowrap, center, center);
       width: 99%;
       max-width: 97vw;
       max-height: 97vh;
 
       & img {
         border: 1px solid tools.$cMainBorder;
-        max-height: 90vh;
+        max-height: 87vh;
         margin-bottom: 0.2rem;
       }
     }

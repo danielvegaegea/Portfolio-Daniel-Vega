@@ -1,24 +1,30 @@
 links:
+software
+https://code.visualstudio.com/
+https://www.mozilla.org/es-ES/firefox/developer/
+https://github.com/
 
-http://www.antoinebret.com/
+gráficos
 https://getbootstrap.com/docs/3.4/components/
+https://htmlcolorcodes.com/es/tabla-de-colores/
+https://webgradients.com/
+https://www.flaticon.com
+
+información
 https://css-tricks.com/creating-a-smart-navbar-with-vanilla-javascript/
 https://stackoverflow.com/questions/61831160/how-to-reuse-a-navigation-bar-across-different-html-pages-with-css-and-js
 https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
-https://developer.mozilla.org/es/docs/Web/Web_Components
-
-
-Resources used:
-https://htmlcolorcodes.com/es/tabla-de-colores/
-https://webgradients.com/
 https://bootcamp.uxdesign.cc/gradient-text-in-css-609068d3f953
+
+Herramientas
 https://www.peko-step.com/es/tool/hslrgb.html
 https://unicode-table.com/es/1F5DA/
-https://www.flaticon.com
 https://codeguide.co/#css-syntax
 
 Resources not used:
 Tip: Use execute. When clicking the anchor, you change url for another.
+http://www.antoinebret.com/
+https://developer.mozilla.org/es/docs/Web/Web_Components
 
 font list:
 source: https://fonts.google.com/
@@ -36,5 +42,4 @@ sass ./styles/sass/common.scss ./styles/css/common.css -w
 sass ./styles/sass/home.scss ./styles/css/home.css -w
 
 ToDo:
-Revisar codigo para buenas costumbres.
-Crear las otras tres webs.
+Terminar `blog`y `Sobre Mi`.
