@@ -12,6 +12,11 @@ const sideBtns = document.getElementsByClassName('nav-btn');
 const footer = document.getElementsByTagName('footer')[0];
 const main = document.getElementsByTagName('main')[0];
 
+//    Dark Theme Button
+const thmBtn = document.getElementsByClassName('btn-thm')[0];
+let dkThemeSt = false;
+const bodyTg = document.getElementsByTagName('body')[0];
+
 //    Modal
 let modalTrigger = document.getElementsByClassName('zoom');
 const modalContainer = document.getElementsByClassName('modal-container')[0];
@@ -59,6 +64,18 @@ const bigFonts = function (event) {
       sideBtn.classList.remove('big-fonts-btn');
     });
     bigFontsSt = false;
+  }
+};
+
+const darkTheme = function (event) {
+  // If button push, sets classes to set the Dark theme and sets the button
+  //  as active.
+  if (!dkThemeSt) {
+    bodyTg.classList.add('dark-theme');
+    dkThemeSt = true;
+  } else {
+    bodyTg.classList.remove('dark-theme');
+    dkThemeSt = false;
   }
 };
 
@@ -112,7 +129,8 @@ burgerBtn.addEventListener('click', showMenu);
 window.addEventListener('resize', noMobile);
 //    Big Fonts
 fontBtn.addEventListener('click', bigFonts);
-
+//    Dark Theme
+thmBtn.addEventListener('click', darkTheme);
 //    Modal Images
 modalClose.addEventListener('click', closeModal);
 modalContainer.addEventListener('click', closeModal);

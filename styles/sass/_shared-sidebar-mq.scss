@@ -104,8 +104,14 @@
       font-size: 1.6rem;
     }
   }
+
+  body.dark-theme {
+    & .sidebar {
+      background-image: tools.$gSideBarMqDk;
+    }
+  }
 }
-// revised? v
+
 // MOBILE SECTION
 @media only screen and (max-width: 480px) {
   body .sidebar-container {
@@ -194,6 +200,7 @@
         @include tools.giveShadow(3);
       }
     }
+
     // BIG FONTS SUBSECTION
     & button.nav-btn.big-fonts-btn {
       font-size: 1rem;
@@ -201,6 +208,14 @@
     }
     & footer.big-fonts-footer {
       font-size: 1.4rem;
+    }
+  }
+  html body.dark-theme {
+    & .sidebar {
+      background-image: tools.$gSideBarMqDk;
+      & .btn-menu {
+        background-color: tools.$cLogoDk;
+      }
     }
   }
 }
