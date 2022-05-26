@@ -219,7 +219,6 @@ main .modal .modal-image-container {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 99%;
   max-width: 97vw;
   max-height: 97vh;
 }

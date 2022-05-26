@@ -219,7 +219,6 @@ main {
 
     & .modal-image-container {
       @include tools.flexing(column, nowrap, center, center);
-      width: 99%;
       max-width: 97vw;
       max-height: 97vh;
 
