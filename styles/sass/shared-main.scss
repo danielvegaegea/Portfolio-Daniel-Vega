@@ -19,8 +19,9 @@ h6 {
 
 main {
   @include tools.flexing(column, none, flex-start, center);
+  color: tools.$cMainFont;
   width: 100vw;
-  padding: 1vw;
+  //padding: 1vw;
   min-height: 100vh;
   font-size: calc(0.8rem + 0.32vw);
   background-color: tools.$cMainBg;
@@ -268,6 +269,19 @@ main {
     & .modal {
       transition: transform 0.5s ease;
       transform: scale(0.1);
+    }
+  }
+}
+
+.dark-theme {
+  main {
+    background-color: tools.$cMainBgDk;
+    color: tools.$cMainFontDk;
+    & .card {
+      background-color: tools.$cMainBlockBgDk;
+    }
+    & .title {
+      background-color: tools.$cMainTitleBgDk;
     }
   }
 }

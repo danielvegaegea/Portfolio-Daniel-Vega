@@ -27,6 +27,13 @@ body {
   @include tools.flexing(row, none, flex-start, center);
 }
 
+a:link {
+  color: tools.$cLink;
+}
+a:visited {
+  color: tools.$cLinkVisited;
+}
+
 .footer-shadow {
   @include tools.giveShadow(1);
 }
@@ -39,8 +46,8 @@ body {
 // SIDEBAR SECTION
 .sidebar-container {
   @include tools.flexing(column, none, flex-start, center);
-  min-width: 14rem;
-  width: 18vw;
+  width: 19vw;
+  min-width: 17rem;
   max-width: 12rem;
 
   & .sidebar {
@@ -49,8 +56,8 @@ body {
     bottom: 0;
 
     @include tools.flexing(column, none, space-between, center);
-    width: 18vw;
-    min-width: 14rem;
+    width: 19vw;
+    min-width: 17rem;
     max-width: 12rem;
 
     outline: 1px solid tools.$cSidebarBorder;
@@ -112,7 +119,7 @@ body {
   }
 }
 
-.logo-link {
+header .logo a.logo-link {
   font-family: 'Oleo Script Swash Caps', cursive;
   font-size: 2.3rem;
   text-decoration: none;
@@ -182,10 +189,12 @@ footer {
   border: 2px solid tools.$cFooterBorder;
   color: tools.$footerFont;
   background-color: tools.$cLogo;
-
-  & .btn-font {
+  & .custom-button-container {
+    @include tools.flexing(row, wrap, space-between, center);
     margin: 0.2rem 0.3em 0.2rem 0;
-
+    width: 4.4rem;
+  }
+  & .cstm-btn {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
@@ -221,4 +230,40 @@ button.font-btn-active {
 
 footer.big-fonts-footer {
   font-size: 0.9rem;
+}
+
+.dark-theme {
+  a:link {
+    color: tools.$cLinkDk;
+  }
+  a:visited {
+    color: tools.$cLinkVisitedDk;
+  }
+  .sidebar {
+    background-color: tools.$cSidebarBgDk;
+    background-image: tools.$gSideBarDk;
+    color: tools.$cMainFontDk;
+    .logo {
+      background-color: tools.$cLogoDk;
+    }
+    & .title {
+      background-color: tools.$cMainTitleBgDk;
+    }
+    & nav {
+      button {
+        color: tools.$cMainFontDk;
+        background-image: tools.$gSideButtonDk;
+        border: 2px solid tools.$cDefaultBorderDk;
+      }
+    }
+    footer {
+      background-color: tools.$cLogoDk;
+    }
+    .cstm-btn {
+      border: 2px solid tools.$cDefaultBorderDk;
+    }
+    .cstm-btn {
+      background-color: tools.$cLogoDk;
+    }
+  }
 }

@@ -29,8 +29,8 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  color: black;
   width: 100vw;
-  padding: 1vw;
   min-height: 100vh;
   font-size: calc(0.8rem + 0.32vw);
   background-color: hsl(184deg, 6%, 81%);
@@ -259,6 +259,17 @@ main .modal-open .modal {
 main .modal-close .modal {
   transition: transform 0.5s ease;
   transform: scale(0.1);
+}
+
+.dark-theme main {
+  background-color: hsl(184deg, 6%, 21%);
+  color: hsl(184deg, 6%, 81%);
+}
+.dark-theme main .card {
+  background-color: hsl(55deg, 100%, 10%);
+}
+.dark-theme main .title {
+  background-color: hsl(283deg, 34%, 20%);
 }
 
 /*# sourceMappingURL=shared-main.css.map */

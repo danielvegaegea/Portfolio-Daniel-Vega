@@ -4,15 +4,26 @@
 
 $cShadow: hsla(0, 0%, 0%, 50%);
 $cDefaultBorder: black;
+$cDefaultBorderDk: hsl(283, 39%, 12%);
 
 // Main
+$cMainFont: black;
+$cMainFontDk: hsl(184, 6%, 81%);
 $cOutsideBg: white;
 $cMainBg: hsl(184, 6%, 81%);
+$cMainBgDk: hsl(184, 6%, 21%);
 $cMainBlockBg: hsl(55, 100%, 95%);
+$cMainBlockBgDk: hsl(55, 100%, 10%);
+$cLink: hsl(240, 100%, 50%);
+$cLinkVisited: hsl(0, 100%, 50%);
+$cLinkDk: hsl(240, 100%, 70%);
+$cLinkVisitedDk: hsl(0, 100%, 40%);
 
 // Sidebar
 $cSidebarBg: hsl(283, 39%, 63%);
 $cSidebarBg2: hsl(283, 39%, 72%);
+$cSidebarBgDk: hsl(283, 39%, 13%);
+$cSidebarBg2Dk: hsl(283, 39%, 22%);
 $cSidebarBorder: black;
 $gSideBar: linear-gradient(
   90deg,
@@ -21,6 +32,15 @@ $gSideBar: linear-gradient(
   $cSidebarBg2 50%,
   $cSidebarBg 80%,
   $cSidebarBg 100%,
+  $cMainBg 99%
+);
+$gSideBarDk: linear-gradient(
+  90deg,
+  $cSidebarBgDk 0%,
+  $cSidebarBgDk 20%,
+  $cSidebarBg2Dk 50%,
+  $cSidebarBgDk 80%,
+  $cSidebarBgDk 100%,
   $cMainBg 99%
 );
 $gSideBarMq: linear-gradient(
@@ -32,6 +52,15 @@ $gSideBarMq: linear-gradient(
   $cSidebarBg 100%,
   $cMainBg 99%
 );
+$gSideBarMqDk: linear-gradient(
+  90deg,
+  $cSidebarBgDk 0%,
+  $cSidebarBgDk 20%,
+  $cSidebarBg2Dk 50%,
+  $cSidebarBgDk 80%,
+  $cSidebarBgDk 100%,
+  $cMainBg 99%
+);
 $gSideButton: linear-gradient(
   -25deg,
   $cSidebarBg 0%,
@@ -41,8 +70,18 @@ $gSideButton: linear-gradient(
   $cSidebarBg 100%,
   $cMainBg 99%
 );
+$gSideButtonDk: linear-gradient(
+  -25deg,
+  $cSidebarBgDk 0%,
+  $cSidebarBgDk 30%,
+  $cSidebarBg2Dk 50%,
+  $cSidebarBgDk 70%,
+  $cSidebarBgDk 100%,
+  $cMainBg 99%
+);
 // Logo
 $cLogo: hsl(283, 34%, 40%);
+$cLogoDk: hsl(283, 34%, 20%);
 $cLogoBorder: hsl(284, 38%, 11%);
 $cLogoText1: #c47d0c;
 $cLogoText2: #eef4a1;
@@ -76,6 +115,7 @@ $cFontBottonBg: hsl(283, 34%, 60%);
 $cModalBackground: rgba(0, 0, 0, 0.5);
 // Main
 $cMainTitleBg: hsl(283, 34%, 40%);
+$cMainTitleBgDk: hsl(283, 34%, 20%);
 $cMainBorder: black;
 //$cTitle: hsl(283, 65%, 28%);
 $cTitle: hsl(86, 65%, 28%);
