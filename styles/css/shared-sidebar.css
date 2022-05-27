@@ -794,10 +794,10 @@ footer.big-fonts-footer {
   background-color: hsl(283deg, 34%, 20%);
 }
 .dark-theme .sidebar .cstm-btn {
-  border: 2px solid hsl(283deg, 39%, 12%);
-}
-.dark-theme .sidebar .cstm-btn {
   background-color: hsl(283deg, 34%, 20%);
+}
+.dark-theme .sidebar .cstm-btn.btn-thm {
+  border: 2px solid hsl(45deg, 70%, 57%);
 }
 
 /*# sourceMappingURL=shared-sidebar.css.map */

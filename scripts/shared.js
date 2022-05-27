@@ -8,6 +8,7 @@ let burgerMenuSt = false;
 //    Font Button
 const fontBtn = document.getElementsByClassName('btn-font')[0];
 let bigFontsSt = false;
+let bigFontsLocalSt = localStorage.getItem('bigFontsMode');
 const sideBtns = document.getElementsByClassName('nav-btn');
 const footer = document.getElementsByTagName('footer')[0];
 const main = document.getElementsByTagName('main')[0];
@@ -15,6 +16,7 @@ const main = document.getElementsByTagName('main')[0];
 //    Dark Theme Button
 const thmBtn = document.getElementsByClassName('btn-thm')[0];
 let dkThemeSt = false;
+let dkThemeLocalSt = localStorage.getItem('darkThemeMode');
 const bodyTg = document.getElementsByTagName('body')[0];
 
 //    Modal
@@ -48,35 +50,57 @@ const showMenu = function (event) {
 const bigFonts = function (event) {
   // If button push, sets classes to increase font-size in several tags
   // and sets the button as active.
+
+  if (event == undefined) {
+    //Triggered if the local key is true when loading the page.
+    bigFontsSt = false;
+  }
+
   if (!bigFontsSt) {
+    // Addomg 'font-btm-active' class when proced.
     fontBtn.classList.add('font-btn-active');
     footer.classList.add('big-fonts-footer');
     main.classList.add('big-fonts-main');
     Array.from(sideBtns).forEach((sideBtn) => {
       sideBtn.classList.add('big-fonts-btn');
     });
+
+    // Setting flags.
     bigFontsSt = true;
+    bigFontsLocalSt = true;
   } else {
+    // Removing 'font-btm-active' class when proced.
     fontBtn.classList.remove('font-btn-active');
     footer.classList.remove('big-fonts-footer');
     main.classList.remove('big-fonts-main');
     Array.from(sideBtns).forEach((sideBtn) => {
       sideBtn.classList.remove('big-fonts-btn');
     });
+
+    // Setting flags.
     bigFontsSt = false;
+    bigFontsLocalSt = false;
   }
+  // Saving the flag to Local Storage.
+  localStorage.setItem('bigFontsMode', bigFontsSt);
 };
 
 const darkTheme = function (event) {
   // If button push, sets classes to set the Dark theme and sets the button
   //  as active.
   if (!dkThemeSt) {
+    // Adding 'dark-theme' class when proced.
     bodyTg.classList.add('dark-theme');
+    // Setting flags.
     dkThemeSt = true;
   } else {
+    // Removing 'dark-theme' class when proced.
     bodyTg.classList.remove('dark-theme');
+    // Setting Flags
     dkThemeSt = false;
   }
+  // Saving the flag to Local Storage.
+  localStorage.setItem('darkThemeMode', dkThemeSt);
 };
 
 const noMobile = function () {
@@ -117,10 +141,21 @@ const closeModal = function () {
 };
 
 // Execution
+
+//    WIDTTH CONTROL
 if (window.innerWidth <= 480) {
   // Executed once to hide menu after loading the web.
   //Alternative: (burgerBtnStyle.visibility == 'visible')
   sideBar.classList.add('hidden');
+}
+
+//    BIG FONTS AND DARK THEME CONTROL
+// checks the Local Storage flags and makes the changes according to them.
+if (bigFontsLocalSt == 'true') {
+  bigFonts();
+}
+if (dkThemeLocalSt == 'true') {
+  darkTheme();
 }
 
 // Event

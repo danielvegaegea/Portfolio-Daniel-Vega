@@ -260,9 +260,9 @@ footer.big-fonts-footer {
       background-color: tools.$cLogoDk;
     }
     .cstm-btn {
-      border: 2px solid tools.$cDefaultBorderDk;
-    }
-    .cstm-btn {
+      &.btn-thm {
+        border: 2px solid tools.$cFontButtonActive;
+      }
       background-color: tools.$cLogoDk;
     }
   }
