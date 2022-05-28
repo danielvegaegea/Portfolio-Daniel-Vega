@@ -95,7 +95,7 @@ main .image-card .image-container .image {
   border-radius: inherit;
 }
 main .card {
-  width: calc(20rem + 27vw);
+  width: calc(17rem + 27vw);
   min-width: 20rem;
   margin-bottom: 3rem;
   padding: 2%;
