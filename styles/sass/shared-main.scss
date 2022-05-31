@@ -277,7 +277,8 @@ main {
   main {
     background-color: tools.$cMainBgDk;
     color: tools.$cMainFontDk;
-    & .card {
+    & .card,
+    & .modal {
       background-color: tools.$cMainBlockBgDk;
     }
     & .title {

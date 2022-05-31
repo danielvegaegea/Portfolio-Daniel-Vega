@@ -266,7 +266,7 @@ main .modal-close .modal {
   background-color: hsl(184deg, 6%, 21%);
   color: hsl(184deg, 6%, 81%);
 }
-.dark-theme main .card {
+.dark-theme main .card, .dark-theme main .modal {
   background-color: hsl(55deg, 100%, 10%);
 }
 .dark-theme main .title {
