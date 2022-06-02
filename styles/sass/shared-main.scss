@@ -107,7 +107,7 @@ main {
       @include tools.flexing(row, none, space-between, center);
       margin-bottom: 1em;
 
-      & div {
+      & picture {
         @include tools.giveShadow(1);
         width: 49%;
       }
