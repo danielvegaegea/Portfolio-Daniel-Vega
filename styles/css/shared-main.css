@@ -161,7 +161,7 @@ main .card p.drop-caps::first-letter {
   color: hsl(283deg, 34%, 40%);
   float: left;
   font-size: 2.5em;
-  line-height: 3em;
+  line-height: 0.7em;
   font-weight: 800;
 }
 main .card li::marker {
